@@ -11,9 +11,7 @@ public class CameraController : MonoBehaviour {
     [SerializeField] float lerp = 1;
     [Tooltip("minimum speed of the camera to follow the target.")]
     [SerializeField] float minSpeed = 1;
-    
-    [Tooltip("Global minimum y value of the cameras position.")]
-    [SerializeField] float yMin = 0;
+
     [Tooltip("Global maximum y value of the cameras postion.")]
     [SerializeField] float yMax = 10;
 
@@ -33,6 +31,9 @@ public class CameraController : MonoBehaviour {
             return;
         }
 
+        //Vector3 newPos = transform.position;
+        //Vector3 
+
         Vector3 newPos = transform.position;
         Vector3 targetPosition = target.position + offset;
         Vector3 targetLerp = Vector3.Lerp(newPos, targetPosition, Time.deltaTime * lerp);
@@ -47,9 +48,9 @@ public class CameraController : MonoBehaviour {
             targetDir.Normalize();
             newPos += targetDir * (Time.deltaTime * minSpeed);
         }
-        newPos.x = Mathf.Clamp(newPos.x, 0, 0);
-        newPos.y = Mathf.Clamp(newPos.y, yMin, yMax);
-
+        newPos.x = 0;
+        newPos.y = Mathf.Clamp(newPos.y, 0, yMax);
+        
         transform.position = newPos;
     }
 
