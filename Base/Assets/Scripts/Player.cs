@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
 
 	}
 
+	/// <summary>
+	/// collision with spikes invokes death
+	/// </summary>
 
 	void OnTriggerEnter2D (Collider2D other) {
 		// if the other object has the MainCamera tag, destroy the shits
@@ -53,7 +56,11 @@ public class Player : MonoBehaviour
 	{
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
 		StartCoroutine (blinkCoroutine (3, 0.2f));
-		//Destroy (gameObject);
+		Invoke ("Remove" , 3);
+	}
+
+	public void Remove (){
+		Destroy (gameObject);
 	}
 
 	public void CollectCoins () {
