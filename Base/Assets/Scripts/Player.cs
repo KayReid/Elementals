@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
 			// back and forth 3 times
 			//toggle renderer
 			rend.enabled = !rend.enabled;
-			// renderer.material.color (Color.red);
 			rend.material.color = Color.red;
 			//wait for a bit
 			yield return new WaitForSeconds(seconds);
@@ -57,8 +56,12 @@ public class Player : MonoBehaviour
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
 		StartCoroutine (blinkCoroutine (3, 0.2f));
 		Invoke ("Remove" , 3);
+		// restart level here? Thanks.
 	}
 
+	/// <summary>
+	/// Remove the player.
+	/// </summary>
 	public void Remove (){
 		Destroy (gameObject);
 	}
