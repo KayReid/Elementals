@@ -587,7 +587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c7801aa3456487a8e6a39e95d63990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4474965556936918, guid: 181b5dd6c5da14d7197d3c854b5d9c03, type: 2}
 --- !u!1001 &764616825
 Prefab:
   m_ObjectHideFlags: 0
@@ -627,7 +626,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114644320978839198, guid: 181b5dd6c5da14d7197d3c854b5d9c03,
+    - target: {fileID: 114323748943365588, guid: 181b5dd6c5da14d7197d3c854b5d9c03,
         type: 2}
       propertyPath: coinText
       value: 
@@ -724,8 +723,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114753471766196510, guid: c07e1bbbadf834cba86ceacf21ac0fe4,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: framesPerSecond
       value: 3
       objectReference: {fileID: 0}
@@ -734,7 +732,8 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: c07e1bbbadf834cba86ceacf21ac0fe4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &927389102
@@ -1236,7 +1235,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 0
 --- !u!222 &1603286597
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1355,6 +1354,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 0.011764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 114130117769873068, guid: 0038cfa7436be476687938f6839c35d3,
+        type: 2}
+      propertyPath: m_Text
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0038cfa7436be476687938f6839c35d3, type: 2}
