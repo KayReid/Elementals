@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
 
 	}
 
+
+	void OnTriggerEnter2D (Collider2D other) {
+		// if the other object has the MainCamera tag, destroy the shits
+		if (other.CompareTag ("spikes")) {
+			Die ();
+		}
+	}
+
 	/// <summary>
 	/// Destroy the player and spawn the death animation.
 	/// </summary>
