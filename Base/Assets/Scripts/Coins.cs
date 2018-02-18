@@ -12,18 +12,23 @@ public class Coins : MonoBehaviour {
 	public Sprite[] frames;
 	private SpriteRenderer spriteRenderer;
 
+
+	public static Coins instance;
+
 	// Use this for initialization
 	void Start () {
+		instance = this;
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		StartCoroutine (PlayAnimation (0.15f));
+
+
 	}
 		
-
 	void OnTriggerEnter2D (Collider2D other) {
 		// if the other object has the player tag...
 		if (other.CompareTag ("Player")) {
-			Player player = other.GetComponent<Player> ();
-			player.CollectCoins ();
+			// Player player = other.GetComponent<Player> ();
+			CoinPanel.instance.CollectCoins ();
 			Destroy (gameObject);
 		}
 	}
