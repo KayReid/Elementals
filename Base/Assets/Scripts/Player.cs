@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 	{
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
 		StartCoroutine (blinkCoroutine (3, 0.2f));
-		Invoke ("Remove" , 3);
+		Invoke ("Remove" , 2);
 		// restart level here? Thanks.
 	}
 
