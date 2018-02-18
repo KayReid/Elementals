@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 212661356549236774}
   - component: {fileID: 61132894899727842}
   - component: {fileID: 68350709132571842}
+  - component: {fileID: 114371494857166590}
   m_Layer: 0
-  m_Name: platform
+  m_Name: weak_platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,6 +85,17 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.6910015, y: 0.21052659}
   - {x: 0.72, y: 0.20334649}
+--- !u!114 &114371494857166590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112537102766178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4694d0ce6db4f94a890700ed23bfdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212661356549236774
 SpriteRenderer:
   m_ObjectHideFlags: 1
