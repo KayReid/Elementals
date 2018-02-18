@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114323748943365588}
   - component: {fileID: 114319431239680622}
   m_Layer: 0
-  m_Name: bowl
+  m_Name: bowl_0
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
