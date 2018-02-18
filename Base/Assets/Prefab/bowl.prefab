@@ -123,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {x: 0, y: 0}
   inputJump: 0
+  inputItem: 0
+  shieldPrefab: {fileID: 1919252058941710, guid: 346c56cc63fda49a1b8547d76128ad14,
+    type: 2}
 --- !u!114 &114319431239680622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+  canUseItem: 0
   numCoins: 0
 --- !u!212 &212835517882637760
 SpriteRenderer:

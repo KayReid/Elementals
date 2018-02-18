@@ -26,6 +26,7 @@ public class PlayerInputModule2D : MonoBehaviour
 		Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Horizontal"));
 		controller.input = input;
 		controller.inputJump = Input.GetButtonDown ("Jump");
+		controller.inputItem = Input.GetKeyDown (KeyCode.X); 
 	}
 
 

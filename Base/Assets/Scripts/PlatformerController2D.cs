@@ -16,7 +16,9 @@ public class PlatformerController2D : MonoBehaviour
 {
 	[HideInInspector] public Vector2 input;	// horizontal movement
 	[HideInInspector] public bool inputJump;	// jumping (whether space is pressed or not)
-	// [HideInInspector] public bool IsGrounded { get { return grounded; } }
+	[HideInInspector] public bool inputItem;	// Use Item (whether A is pressed or not)
+
+	public GameObject shieldPrefab;
 
 
 	private float speed = 5f; 	// horizontal movement speed
@@ -28,6 +30,8 @@ public class PlatformerController2D : MonoBehaviour
 	float jumpForce = 10f;
 
 	void Start () {
+		inputItem = false;
+		// print (inputItem);
 		grounded = false;
 		rb = GetComponent <Rigidbody2D> ();
 	}
@@ -41,15 +45,39 @@ public class PlatformerController2D : MonoBehaviour
 		// horizontal
 		velocity.x = input.x * speed;
 		if (inputJump && grounded) {
-			velocity.y = jumpForce; // amount of jump
+			// velocity.y = jumpForce; // amount of jump
+			velocity = ApplyJump (velocity);
+
 
 			// print ("attempt jump");
 		}
 		grounded = false;
 		velocity.y += -gravity * Time.deltaTime;
 		rb.velocity = velocity;
-			
+
 	}
+
+	void Update () {
+		// if (Coins.instance.canUseItem && inputItem) {
+		if (CoinPanel.instance.canUseItem() && inputItem) {
+			UseItem ();
+
+			// print ("Use the item");
+		}	
+	}
+
+	Vector2 ApplyJump (Vector2 velocity) {
+		velocity.y = jumpForce; // amount of jump
+		return velocity;
+	}
+
+	void UseItem () {
+		Player player = GetComponent<Player> ();
+		CoinPanel.instance.removeCoins ();
+		Instantiate(shieldPrefab, player.transform.position, Quaternion.identity);
+
+	}
+
 
 	void OnCollisionStay2D() {
 		// print ("grounded");

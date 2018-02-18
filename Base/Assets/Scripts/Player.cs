@@ -10,15 +10,14 @@ public class Player : MonoBehaviour
 {
 
 	Renderer rend;
-	public Text coinText;
-	public int numCoins;
+	public static Player instance;
 
 	void Awake ()
 	{
+		instance = this;
 		rend = GetComponent<Renderer>();
 		rend.enabled = true;
-		numCoins = 0;
-		setCoinText ();
+
 	}
 		
 	IEnumerator blinkCoroutine (int numBlinks, float seconds) {
@@ -65,15 +64,8 @@ public class Player : MonoBehaviour
 	public void Remove (){
 		Destroy (gameObject);
 	}
+		
 
-	public void CollectCoins () {
-		numCoins++;
-		setCoinText ();
-	
-	}
-	void setCoinText () {
-		coinText.text = numCoins.ToString ();
 
-	}
 
 }
