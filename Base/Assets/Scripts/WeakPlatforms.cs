@@ -5,19 +5,10 @@ using UnityEngine;
 public class WeakPlatforms : MonoBehaviour {
 
 
-	void OnCollisionEnter2D (Collider2D other) {
+	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			Weak ();
+			Invoke("Remove", 2);
 		}
-	}
-
-	/// <summary>
-	/// Destroy the platform, play animation
-	/// </summary>
-	public void Weak ()
-	{
-		print ("touching");
-		Invoke ("Remove" , 3);
 	}
 
 	/// <summary>

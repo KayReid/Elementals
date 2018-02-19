@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114081068582785120}
   - component: {fileID: 114323748943365588}
   - component: {fileID: 114319431239680622}
+  - component: {fileID: 60848996083888660}
   m_Layer: 0
   m_Name: bowl
   m_TagString: Player
@@ -75,6 +76,51 @@ PolygonCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 5683b0b8cd6a24446a7220a66f744570, type: 2}
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.49, y: 1.48}
+    newSize: {x: 1.49, y: 1.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.745, y: -0.32}
+      - {x: 0.745, y: 0.19999999}
+      - {x: 0.72499996, y: 0.22999999}
+      - {x: 0.745, y: 0.35}
+      - {x: 0.745, y: 0.66999996}
+      - {x: 0.66499996, y: 0.74}
+      - {x: 0.525, y: 0.74}
+      - {x: 0.405, y: 0.41}
+      - {x: 0.295, y: 0.44}
+      - {x: -0.185, y: 0.45}
+      - {x: -0.525, y: 0.38}
+      - {x: -0.66499996, y: 0.31}
+      - {x: -0.745, y: 0.19}
+      - {x: -0.745, y: -0.38}
+      - {x: -0.525, y: -0.65999997}
+      - {x: -0.385, y: -0.71}
+      - {x: -0.24499999, y: -0.74}
+      - {x: 0.295, y: -0.74}
+      - {x: 0.39499998, y: -0.71999997}
+      - {x: 0.545, y: -0.63}
+      - {x: 0.66499996, y: -0.52}
+--- !u!60 &60848996083888660
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867230517103586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
