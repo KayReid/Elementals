@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class WeakPlatforms : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
-	void OnTriggerEnter2D (Collider2D other) {
-		if (other.CompareTag ("player")) {
+	void OnCollisionEnter2D (Collider2D other) {
+		if (other.gameObject.CompareTag ("Player")) {
 			Weak ();
 		}
 	}
@@ -24,6 +16,7 @@ public class WeakPlatforms : MonoBehaviour {
 	/// </summary>
 	public void Weak ()
 	{
+		print ("touching");
 		Invoke ("Remove" , 3);
 	}
 
