@@ -23,9 +23,14 @@ GameObject:
   - component: {fileID: 61254325159564394}
   - component: {fileID: 68830328745599920}
   - component: {fileID: 114698888619238728}
+<<<<<<< HEAD
   m_Layer: 8
+=======
+  - component: {fileID: 68956331792409848}
+  m_Layer: 0
+>>>>>>> f0f6cbe6bfc2ad08f1adf61f42a0dbb31ee8185b
   m_Name: moving_platform
-  m_TagString: Untagged
+  m_TagString: moving_platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +82,7 @@ EdgeCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -85,6 +90,23 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.6910015, y: 0.21052659}
   - {x: 0.72, y: 0.20334649}
+--- !u!68 &68956331792409848
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1106892387304634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.72, y: 0}
+  - {x: 0.72, y: 0}
 --- !u!114 &114698888619238728
 MonoBehaviour:
   m_ObjectHideFlags: 1
