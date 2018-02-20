@@ -170,7 +170,14 @@ MonoBehaviour:
   input: {x: 0, y: 0}
   inputJump: 0
   inputItem: 0
-  shieldPrefab: {fileID: 1919252058941710, guid: 346c56cc63fda49a1b8547d76128ad14,
+  groundCheckOffset: {x: 0, y: -0.6}
+  groundCheckWidth: 0.7
+  groundCheckDepth: 0.2
+  groundCheckRayCount: 3
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  shieldPrefab: {fileID: 1919252058941710, guid: bb94d83b563610147ae88ac9d142f977,
     type: 2}
 --- !u!114 &114319431239680622
 MonoBehaviour:

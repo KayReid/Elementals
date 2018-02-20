@@ -228,7 +228,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
-  shieldPrefab: {fileID: 1919252058941710, guid: bb94d83b563610147ae88ac9d142f977,
+  shieldPrefab: {fileID: 1469284339564070, guid: eb4c21d2204944c8482e190db95cd69e,
     type: 2}
 --- !u!60 &164436877
 PolygonCollider2D:
