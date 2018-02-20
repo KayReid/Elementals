@@ -45,18 +45,6 @@ public class Player : MonoBehaviour
 		if (other.CompareTag ("spikes")) {
 			Die ();
 		}
-
-		if(other.gameObject.tag == "moving_platform"){
-			transform.parent = other.transform;
-
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-		if(other.gameObject.tag == "moving_platform"){
-			transform.parent = null;
-
-		}
 	} 
 
 	/// <summary>
