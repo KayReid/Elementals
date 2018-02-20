@@ -1,9 +1,3 @@
-// <copyright file="PlayerInputModule2D.cs" company="DIS Copenhagen">
-// Copyright (c) 2017 All Rights Reserved
-// </copyright>
-// <author>Benno Lueders</author>
-// <date>07/14/2017</date>
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212129650045325224}
   - component: {fileID: 61481210519696758}
   - component: {fileID: 68775117091909200}
-  - component: {fileID: 114534829989344058}
+  - component: {fileID: 114383168847129646}
   m_Layer: 8
   m_Name: moving_platform 1
   m_TagString: Untagged
@@ -85,7 +85,7 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.6910015, y: 0.21052659}
   - {x: 0.72, y: 0.20334649}
---- !u!114 &114534829989344058
+--- !u!114 &114383168847129646
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022865579845288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43691f360d9be4df69b41097a037d44d, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c3b5df64bde2246bc0a429b1805ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212129650045325224
