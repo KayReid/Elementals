@@ -109,7 +109,7 @@ public class PlatformerController2D : MonoBehaviour
 				RaycastHit2D hit = Physics2D.Raycast (groundCheckStart, Vector2.down, groundCheckDepth, groundLayers);
 				// print ("update grounding");
 				if (hit.collider != null) {
-					print ("update grounding");
+					// print ("update grounding");
 					grounded = true;
 					return;
 				}
