@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour {
 	[SerializeField] Collider2D leftWallCheck = null;
 	[Tooltip ("Trigger to be placed slightly to the right of the NPC collider. A collision will cause the NPC to turn around.")]
 	[SerializeField] Collider2D rightWallCheck = null;
+	[Tooltip ("Layers to be considered ground for groundchecks and collision checks when checking for change of direction.")]
+	[SerializeField] LayerMask groundLayers = 0;
 
 	private int dir = 1;
 	public float speed = 3;
@@ -22,22 +24,29 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (leftWallCheck.IsTouchingLayers (groundLayers)) {
+			dir = 1;
+		}
+
+		if (rightWallCheck.IsTouchingLayers (groundLayers)) {
+			dir = -1;
+		}
+			
 		transform.position += Vector3.right * dir * speed * Time.deltaTime;
+
+
+
 	}
 
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.CompareTag ("spikes")) {
-			dir *= -1;
-
-		}
 		if (other.CompareTag ("Player")) {
 			Player.instance.Die ();
-			dir *= -1;
+			//dir *= -1;
 		}
 
-		print (dir);
+		// print (dir);
 	}
 
 }
