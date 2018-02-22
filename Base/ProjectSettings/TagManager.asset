@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spikes
   - moving_platform
+  - enemy
   layers:
   - Default
   - TransparentFX

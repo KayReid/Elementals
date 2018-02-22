@@ -55,8 +55,9 @@ public class Player : MonoBehaviour
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
 		StartCoroutine (blinkCoroutine (3, 0.2f));
 		Invoke ("Remove" , 2);
-		// restart level here? Thanks.
-	}
+        // restart level here
+        GameManager.instance.RestartTheGameAfterSeconds(3);
+    }
 
 	/// <summary>
 	/// Remove the player.
