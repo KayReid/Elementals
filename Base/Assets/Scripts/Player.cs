@@ -35,17 +35,7 @@ public class Player : MonoBehaviour
 		rend.material.color = Color.white;
 
 	}
-
-	/// <summary>
-	/// collision with spikes invokes death
-	/// </summary>
-
-	void OnTriggerEnter2D (Collider2D other) {
-		// if the other object has the MainCamera tag, destroy the shits
-		if (other.CompareTag ("spikes")) {
-			Die ();
-		}
-	} 
+		
 
 	/// <summary>
 	/// Destroy the player and spawn the death animation.

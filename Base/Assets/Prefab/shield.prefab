@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4512218830767488}
   - component: {fileID: 212051512200371988}
-  - component: {fileID: 114425297590604420}
+  - component: {fileID: 58674505060557978}
+  - component: {fileID: 114078100730896820}
   m_Layer: 0
   m_Name: shield
-  m_TagString: Untagged
+  m_TagString: shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,13 +36,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1469284339564070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.19, y: -2.3, z: 0}
+  m_LocalPosition: {x: 5.443386, y: -0.35281038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114425297590604420
+--- !u!58 &58674505060557978
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469284339564070}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.345
+--- !u!114 &114078100730896820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4729c918972cb4a93b350bf785dca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 3
+  lifeTime: 7
 --- !u!212 &212051512200371988
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -12,13 +12,13 @@ public class Enemy : MonoBehaviour {
 	[Tooltip ("Layers to be considered ground for groundchecks and collision checks when checking for change of direction.")]
 	[SerializeField] LayerMask groundLayers = 0;
 
-	private int dir = 1;
+	public int dir = 1;
 	public float speed = 3;
-	PlatformerController2D controller;
+
 
 	// Use this for initialization
 	void Start () {
-		controller = GetComponent<PlatformerController2D> ();
+
 	}
 	
 	// Update is called once per frame
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour {
 		if (rightWallCheck.IsTouchingLayers (groundLayers)) {
 			dir = -1;
 		}
-			
+		// print (dir);
 		transform.position += Vector3.right * dir * speed * Time.deltaTime;
 
 
@@ -41,12 +41,12 @@ public class Enemy : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
+		
 		if (other.CompareTag ("Player")) {
 			Player.instance.Die ();
-			//dir *= -1;
-		}
 
-		// print (dir);
+		}
+			
 	}
 
 }

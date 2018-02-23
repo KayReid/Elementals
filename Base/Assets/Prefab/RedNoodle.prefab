@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 50434921738450976}
   m_Layer: 0
   m_Name: RedNoodle
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.82159376, y: -0.61032677}
@@ -347,6 +347,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  dir: 1
   speed: 3
 --- !u!212 &212508402043495434
 SpriteRenderer:

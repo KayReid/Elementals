@@ -17,7 +17,7 @@ public class PlatformerController2D : MonoBehaviour
 
 	[Header ("Grounding")]
 	[Tooltip ("Offset of the grounding raycasts (red lines)")]
-	[SerializeField] Vector2 groundCheckOffset = new Vector2 (0, -0.6f); // set the location of the raycast
+	[SerializeField] Vector2 groundCheckOffset = new Vector2 (0, -0.6f); // set the location of the raycast // -1.3
 	[Tooltip ("Width of the grounding raycasts.")]
 	[SerializeField] float groundCheckWidth = 0.7f; // distances between each raycast
 	[Tooltip ("Distance of the grounding raycasts.")]
@@ -27,7 +27,7 @@ public class PlatformerController2D : MonoBehaviour
 	[Tooltip ("Layers to be considered ground.")]
 	[SerializeField] LayerMask groundLayers = 0;
 
-
+	public static PlatformerController2D instance;
 	public GameObject shieldPrefab;
 	private float speed = 5f; 	// horizontal movement speed
 	private bool grounded = false; 	// on ground or not
@@ -38,6 +38,7 @@ public class PlatformerController2D : MonoBehaviour
 
 
 	void Start () {
+		instance = this;
 		inputItem = false;
 		// print (inputItem);
 		// grounded = false;
@@ -70,6 +71,7 @@ public class PlatformerController2D : MonoBehaviour
 		// if (Coins.instance.canUseItem && inputItem) {
 		if (CoinPanel.instance.canUseItem() && inputItem) {
 			UseItem ();
+
 
 			// print ("Use the item");
 		}	
@@ -117,11 +119,6 @@ public class PlatformerController2D : MonoBehaviour
 				groundCheckStart += Vector2.right * (1.0f / (groundCheckRayCount - 1.0f)) * groundCheckWidth;
 			}
 		}
-		/*
-		if (grounded) {
-			lastGroundingTime = Time.time;
-		}
-*/
 		grounded = false;
 
 	}
