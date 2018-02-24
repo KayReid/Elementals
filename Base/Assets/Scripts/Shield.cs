@@ -19,9 +19,12 @@ public class Shield : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Player.instance.transform.position;
+		if (Player.instance != null) {
+			transform.position = Player.instance.transform.position;
 
-		print (transform.position.x);
+			// print (transform.position.x);
+		}
+
 
 	}
 

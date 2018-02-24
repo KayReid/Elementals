@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour {
 	[Tooltip ("Trigger to be placed slightly to the right of the NPC collider. A collision will cause the NPC to turn around.")]
 	[SerializeField] Collider2D rightWallCheck = null;
 	[Tooltip ("Layers to be considered ground for groundchecks and collision checks when checking for change of direction.")]
-	[SerializeField] LayerMask groundLayers = 0;
+	[SerializeField] LayerMask obstacleLayers = 0;
 
 	[Tooltip("The individual sprites of the animation")]
 	public Sprite[] frames;
@@ -31,12 +31,12 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (leftWallCheck.IsTouchingLayers (groundLayers)) {
+		if (leftWallCheck.IsTouchingLayers (obstacleLayers)) {
 			dir = 1;
 			spriteRenderer.flipX = false;
 		}
 
-		if (rightWallCheck.IsTouchingLayers (groundLayers)) {
+		if (rightWallCheck.IsTouchingLayers (obstacleLayers)) {
 			dir = -1;
 			spriteRenderer.flipX = true;
 		}

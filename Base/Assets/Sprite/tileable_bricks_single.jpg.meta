@@ -1,0 +1,627 @@
+fileFormatVersion: 2
+guid: 34a447981436a437f9ecdea2aee95a29
+timeCreated: 1519484707
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tileable_bricks_single_0
+    21300002: tileable_bricks_single_1
+    21300004: tileable_bricks_single_2
+    21300006: tileable_bricks_single_3
+    21300008: tileable_bricks_single_4
+    21300010: tileable_bricks_single_5
+    21300012: tileable_bricks_single_6
+    21300014: tileable_bricks_single_7
+    21300016: tileable_bricks_single_8
+    21300018: tileable_bricks_single_9
+    21300020: tileable_bricks_single_10
+    21300022: tileable_bricks_single_11
+    21300024: tileable_bricks_single_12
+    21300026: tileable_bricks_single_13
+    21300028: tileable_bricks_single_14
+    21300030: tileable_bricks_single_15
+    21300032: tileable_bricks_single_16
+    21300034: tileable_bricks_single_17
+    21300036: tileable_bricks_single_18
+    21300038: tileable_bricks_single_19
+    21300040: tileable_bricks_single_20
+    21300042: tileable_bricks_single_21
+    21300044: tileable_bricks_single_22
+    21300046: tileable_bricks_single_23
+    21300048: tileable_bricks_single_24
+    21300050: tileable_bricks_single_25
+    21300052: tileable_bricks_single_26
+    21300054: tileable_bricks_single_27
+    21300056: tileable_bricks_single_28
+    21300058: tileable_bricks_single_29
+    21300060: tileable_bricks_single_30
+    21300062: tileable_bricks_single_31
+    21300064: tileable_bricks_single_32
+    21300066: tileable_bricks_single_33
+    21300068: tileable_bricks_single_34
+    21300070: tileable_bricks_single_35
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tileable_bricks_single_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 895
+        width: 257
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 897
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 901
+        width: 125
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 899
+        width: 134
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_4
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 891
+        width: 250
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_5
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 893
+        width: 127
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 769
+        width: 130
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 636
+        width: 129
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 773
+        width: 252
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_9
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 767
+        width: 132
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_10
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 643
+        width: 126
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 767
+        width: 253
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 130
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 513
+        width: 122
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_14
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 513
+        width: 252
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 387
+        width: 258
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_16
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 515
+        width: 126
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_17
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 511
+        width: 128
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 254
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_19
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 385
+        width: 128
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 255
+        width: 126
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_21
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 256
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_22
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 387
+        width: 126
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 385
+        width: 121
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 130
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 256
+        width: 253
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_26
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 126
+        width: 125
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_27
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 257
+        width: 132
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_28
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 253
+        width: 254
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_29
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 129
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 132
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_31
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 3
+        width: 253
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_32
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 3
+        width: 125
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_33
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 3
+        width: 132
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_34
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 3
+        width: 249
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileable_bricks_single_35
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 5
+        width: 126
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

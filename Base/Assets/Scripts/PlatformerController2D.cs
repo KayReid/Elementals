@@ -90,15 +90,8 @@ public class PlatformerController2D : MonoBehaviour
 
 	}
 
-	/*
-	void OnCollisionStay2D() {
-		// print ("grounded");
-		grounded = true;
-	}
-	*/
-
 	/// <summary>
-	/// Updates grounded and lastGroundingTime.
+	/// Updates bool grounded 
 	/// </summary>
 	void UpdateGrounding ()
 	{
