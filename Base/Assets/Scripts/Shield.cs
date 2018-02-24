@@ -7,10 +7,8 @@ using UnityEngine;
 public class Shield : MonoBehaviour {
 
 	[Tooltip ("After how many seconds is the Shield destroyed")]
-	public float lifeTime = 3;
-	// public CircleCollider2D circle;
-	// PlatformerController2D controller;
-	// public Transform target;
+	public float lifeTime = 5;
+
 
 
 	// Use this for initialization
@@ -23,6 +21,7 @@ public class Shield : MonoBehaviour {
 	void Update () {
 		transform.position = Player.instance.transform.position;
 
+		print (transform.position.x);
 
 	}
 
