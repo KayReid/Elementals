@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212296640005812506}
   - component: {fileID: 61035476437699454}
   m_Layer: 8
-  m_Name: wind_platform3
+  m_Name: Wind_Platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
