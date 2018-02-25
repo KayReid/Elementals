@@ -13,8 +13,6 @@ public class PlatformerController2D : MonoBehaviour
 	[HideInInspector] public bool inputJump;	// jumping (whether space is pressed or not)
 	[HideInInspector] public bool inputItem;	// Use Item (whether A is pressed or not)
 
-
-
 	[Header ("Grounding")]
 	[Tooltip ("Offset of the grounding raycasts (red lines)")]
 	[SerializeField] Vector2 groundCheckOffset = new Vector2 (0, -0.6f); // set the location of the raycast // -1.3
@@ -55,11 +53,8 @@ public class PlatformerController2D : MonoBehaviour
 		// horizontal
 		velocity.x = input.x * speed;
 		if (inputJump && grounded) {
-			// velocity.y = jumpForce; // amount of jump
 			velocity = ApplyJump (velocity);
 
-			// grounded = false;
-			// print ("attempt jump");
 		}
 
 		velocity.y += -gravity * Time.deltaTime;

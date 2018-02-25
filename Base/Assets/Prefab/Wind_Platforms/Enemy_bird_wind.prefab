@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61471569251551634}
   m_Layer: 0
   m_Name: LeftWallCheck
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 61935455516150558}
   m_Layer: 0
   m_Name: RightWallCheck
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1930022004775376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9, y: 4.743743, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5481586, y: 3.3144865, z: -1.4281082}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4403329240959140}
@@ -199,11 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15b2a62499194ef79949f7a9dd11c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftWallCheck: {fileID: 61471569251551634}
-  rightWallCheck: {fileID: 61935455516150558}
-  groundLayers:
+  obstacleLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   frames:
   - {fileID: 21300000, guid: 0bcb31058be834d16a673c22162c2fa8, type: 3}
   - {fileID: 21300000, guid: e10b4c3e2ab0c4e8c92b9f7655a4ce14, type: 3}
@@ -212,6 +210,9 @@ MonoBehaviour:
   seconds: 0.1
   dir: 1
   speed: 3
+  body: {fileID: 58000995414646822}
+  leftCheck: {fileID: 61471569251551634}
+  rightCheck: {fileID: 61935455516150558}
 --- !u!212 &212323474226563344
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -245,7 +246,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0bcb31058be834d16a673c22162c2fa8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

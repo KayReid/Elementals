@@ -8,11 +8,12 @@ public class Shield : MonoBehaviour {
 
 	[Tooltip ("After how many seconds is the Shield destroyed")]
 	public float lifeTime = 5;
-
+	public CircleCollider2D circle;
 
 
 	// Use this for initialization
 	void Start () {
+		// circle.enabled = false;
 		StartCoroutine (KillAfterSeconds (lifeTime));
 		// controller = GetComponent<PlatformerController2D> ();
 	}
@@ -25,23 +26,31 @@ public class Shield : MonoBehaviour {
 			// print (transform.position.x);
 		}
 
-
+		print (circle.enabled);
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.CompareTag ("enemy")) {
+			circle.enabled = true;
+			print (circle.enabled);
+			print ("Enemy Attack");
 			Enemy enemy = other.GetComponent<Enemy> ();
-			if (enemy.dir == 1) {
-				enemy.dir = -1;
-			} else {
-				enemy.dir = 1;
-			}
-			print (enemy.dir);
+			enemy.leftCheck.isTrigger = false;
+			enemy.rightCheck.isTrigger = false;
+			enemy.body.isTrigger = false;
 		}
 
 	}
 
+	void OnTriggerExit2D (Collider2D other) {
+		if (other.CompareTag ("enemy")) {
+			Enemy enemy = other.GetComponent<Enemy> ();
+			enemy.leftCheck.isTrigger = true;
+			enemy.rightCheck.isTrigger = true;
+			enemy.body.isTrigger = true;
+		}
+	}
 
 
 	IEnumerator KillAfterSeconds (float seconds)
