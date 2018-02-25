@@ -5,11 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
 
-	[Tooltip ("Trigger to be placed slightly to the left of the NPC collider. A collision will cause the NPC to turn around.")]
-	[SerializeField] Collider2D leftWallCheck = null;
-	[Tooltip ("Trigger to be placed slightly to the right of the NPC collider. A collision will cause the NPC to turn around.")]
-	[SerializeField] Collider2D rightWallCheck = null;
-	[Tooltip ("Layers to be considered ground for groundchecks and collision checks when checking for change of direction.")]
+
+	[Tooltip ("Layers to be considered obstacles for obstacle checks and collision checks when checking for change of direction.")]
 	[SerializeField] LayerMask obstacleLayers = 0;
 
 	[Tooltip("The individual sprites of the animation")]
@@ -20,6 +17,9 @@ public class Enemy : MonoBehaviour {
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
 	public float speed = 3;
+	public CircleCollider2D body;
+	public Collider2D leftCheck = null;
+	public Collider2D rightCheck = null;
 
 
 	// Use this for initialization
@@ -31,12 +31,12 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (leftWallCheck.IsTouchingLayers (obstacleLayers)) {
+		if (leftCheck.IsTouchingLayers (obstacleLayers)) {
 			dir = 1;
 			spriteRenderer.flipX = false;
 		}
 
-		if (rightWallCheck.IsTouchingLayers (obstacleLayers)) {
+		if (rightCheck.IsTouchingLayers (obstacleLayers)) {
 			dir = -1;
 			spriteRenderer.flipX = true;
 		}
@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour {
 			player.Die ();
 
 		}
+
 			
 	}
 
