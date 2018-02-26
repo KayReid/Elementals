@@ -44,9 +44,18 @@ public class Player : MonoBehaviour
 	{
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
 		StartCoroutine (blinkCoroutine (3, 0.2f));
-		Invoke ("Remove" , 2);
+		Invoke ("Remove" , 1);
         // restart level here
-        GameManager.instance.RestartTheGameAfterSeconds(3);
+        GameManager.instance.RestartTheGameAfterSeconds(2);
+    }
+
+    /// <summary>
+    /// Restart the level when the player exits the screen - results in a faster restart, since death animation doesn't play.
+    /// </summary>
+    public void ExitScreen()
+    {
+        Invoke("Remove", 0.5f);
+        GameManager.instance.RestartTheGameAfterSeconds(1.5f);
     }
 
 	/// <summary>

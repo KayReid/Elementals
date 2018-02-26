@@ -59,7 +59,7 @@ public class CameraController : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
             Player player = collision.GetComponent<Player>();
-            player.Die();
+            player.ExitScreen();
         }
     }
 }
