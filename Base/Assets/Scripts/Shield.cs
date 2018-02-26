@@ -28,7 +28,7 @@ public class Shield : MonoBehaviour {
 
 		print (circle.enabled);
 	}
-
+	/*
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.CompareTag ("enemy")) {
@@ -52,7 +52,7 @@ public class Shield : MonoBehaviour {
 		}
 	}
 
-
+*/
 	IEnumerator KillAfterSeconds (float seconds)
 	{
 		yield return new WaitForSeconds (seconds);
