@@ -26,12 +26,28 @@ public class MovingPlatform : MonoBehaviour {
 		transform.position = newPosition;
 	}
 
-	void onCollisionEnter2D(Collider other){
-		if(other.gameObject.tag == "Player")
-		{
-			//This will make the player a child of the Obstacle
-			other.gameObject.transform.parent = this.gameObject.transform; 
+	//If character collides with the platform, make it its child.
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Player") {
+			MakeChild ();   
 		}
 	}
+	//Once it leaves the platform, become a normal object again.
+	void OnCollisionExit2D(Collision2D coll){
+		if (coll.gameObject.tag == "Player") {
+			ReleaseChild(); 
+		}
+	}
+
+	void MakeChild(){
+		Player player = GetComponent<Player> ();
+		player.transform.parent = transform;
+	}
+
+	void ReleaseChild(){
+		Player player = GetComponent<Player> ();
+		player.transform.parent = null;
+	}   
 }
+
 

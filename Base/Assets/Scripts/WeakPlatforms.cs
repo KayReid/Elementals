@@ -7,6 +7,7 @@ public class WeakPlatforms : MonoBehaviour {
 	/// Platform falls after a given time interval
 	/// </summary>
 	public float fallDelay = 1f;
+	public float removeDelay = 4f;
 
 	private Rigidbody2D weakPlatform;
 
@@ -23,5 +24,10 @@ public class WeakPlatforms : MonoBehaviour {
 
 	void Fall(){
 		weakPlatform.isKinematic = false;
+		Invoke ("Remove", removeDelay);
+	}
+
+	void Remove(){
+		Destroy(gameObject);
 	}
 }
