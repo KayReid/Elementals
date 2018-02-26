@@ -8,7 +8,6 @@ public class Shield : MonoBehaviour {
 
 	[Tooltip ("After how many seconds is the Shield destroyed")]
 	public float lifeTime = 5;
-	public CircleCollider2D circle;
 
 
 	// Use this for initialization
@@ -25,8 +24,7 @@ public class Shield : MonoBehaviour {
 
 			// print (transform.position.x);
 		}
-
-		print (circle.enabled);
+			
 	}
 
 	IEnumerator KillAfterSeconds (float seconds)

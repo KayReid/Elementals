@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingPlatformReact : MonoBehaviour {
 
-	void OnCollisionEnter2D(Collider other){
+	void OnCollisionEnter2D(Collision2D other){
 		if(other.gameObject.tag == "moving_platform")
 		{
 			//This will make the player a child of the Obstacle

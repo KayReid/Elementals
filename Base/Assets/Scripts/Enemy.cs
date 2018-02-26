@@ -15,16 +15,22 @@ public class Enemy : MonoBehaviour {
 	public float seconds;
 	[Tooltip("Prefab to be instantiated when shooting (Snowball)")]
 	public GameObject snowballPrefab;
+	public GameObject deadPrefab;
+
 
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
-	public float speed = 3;
+	public float speed;
 	public Collider2D body;
-	public Collider2D leftCheck = null;
+	public Collider2D leftCheck = null; // 
 	public Collider2D rightCheck = null;
 	public bool canShoot; 	// Birds cannot shoot, Ghosts can shoot (Set bird's canShoot as false and ghost's as true)
+	// public bool canMove; // Birds can move, enemies falling from the sky cannot;
 	public float rateOfFire;
 	private float lastTimeFired = 0;
+
+	// public float minSpeed = 2;
+	// public float maxSpeed = 5;
 
 
 	// Use this for initialization
@@ -32,11 +38,14 @@ public class Enemy : MonoBehaviour {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.enabled = true;
 		StartCoroutine(PlayAnimation());
+		// speed = Random.Range (minSpeed, maxSpeed);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
+		// Enemy Type: Birds
 		if (leftCheck != null && rightCheck != null) {
 			if (leftCheck.IsTouchingLayers (obstacleLayers)) {
 				dir = 1;
@@ -47,14 +56,15 @@ public class Enemy : MonoBehaviour {
 				dir = -1;
 				spriteRenderer.flipX = true;
 			}
-			// print (dir);
 			transform.position += Vector3.right * dir * speed * Time.deltaTime;
-
 		}
+
+		// Enemy Type: Ghosts that move and shoot
 		if (canShoot && (lastTimeFired + 1 / rateOfFire) < Time.time) {
 			lastTimeFired = Time.time;
 			Shoot ();
 		}
+			
 
 	}
 
@@ -73,7 +83,7 @@ public class Enemy : MonoBehaviour {
     /// </summary>
     public void Die()
     {
-        // Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
+        Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
         StartCoroutine(blinkCoroutine(3, 0.2f));
         Invoke("Remove", 2);
     }

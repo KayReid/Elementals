@@ -9,43 +9,74 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1992951438411452}
+  m_RootGameObject: {fileID: 1822740604602158}
   m_IsPrefabParent: 1
---- !u!1 &1992951438411452
+--- !u!1 &1822740604602158
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4130663432139944}
-  - component: {fileID: 212263528588471876}
+  - component: {fileID: 4034752293797586}
+  - component: {fileID: 212396907444461924}
+  - component: {fileID: 114566058217768546}
   m_Layer: 0
-  m_Name: enemies_0
+  m_Name: Falling_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4130663432139944
+--- !u!4 &4034752293797586
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992951438411452}
+  m_GameObject: {fileID: 1822740604602158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83, y: 3.77, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -2.48, y: 47.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212263528588471876
+--- !u!114 &114566058217768546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822740604602158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15b2a62499194ef79949f7a9dd11c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 3072
+  frames:
+  - {fileID: 21300090, guid: 49e9bf074b6e3413fa9d5b566d2fdbb6, type: 3}
+  - {fileID: 21300094, guid: 49e9bf074b6e3413fa9d5b566d2fdbb6, type: 3}
+  seconds: 0
+  snowballPrefab: {fileID: 0}
+  deadPrefab: {fileID: 1468200349028784, guid: 513bb92dfed77408a86150e1fe8adaa0, type: 2}
+  dir: 1
+  speed: 0
+  body: {fileID: 0}
+  leftCheck: {fileID: 0}
+  rightCheck: {fileID: 0}
+  canShoot: 0
+  canMove: 0
+  rateOfFire: 0
+  minSpeed: 2
+  maxSpeed: 5
+--- !u!212 &212396907444461924
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992951438411452}
+  m_GameObject: {fileID: 1822740604602158}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,13 +104,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300090, guid: 49e9bf074b6e3413fa9d5b566d2fdbb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.51, y: 0.73}
+  m_Size: {x: 1.14, y: 1.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

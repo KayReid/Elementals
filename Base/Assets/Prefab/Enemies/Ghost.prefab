@@ -77,13 +77,16 @@ MonoBehaviour:
   seconds: 2
   snowballPrefab: {fileID: 1646937443227364, guid: 205f62d327a0d45069922e6e1acf5289,
     type: 2}
+  deadPrefab: {fileID: 1863925362903422, guid: 2db650ab69fd844449ed24a2fc57dc98, type: 2}
   dir: -1
-  speed: 0
+  speed: 3.885125
   body: {fileID: 70176089977496158}
   leftCheck: {fileID: 0}
   rightCheck: {fileID: 0}
   canShoot: 1
-  rateOfFire: 1
+  rateOfFire: 0.5
+  minSpeed: 2
+  maxSpeed: 5
 --- !u!212 &212749455683418596
 SpriteRenderer:
   m_ObjectHideFlags: 1

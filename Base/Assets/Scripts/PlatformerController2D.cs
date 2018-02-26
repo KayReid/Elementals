@@ -109,10 +109,10 @@ public class PlatformerController2D : MonoBehaviour
         Instantiate(projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
     }
 
-/// <summary>
-/// Updates bool grounded 
-/// </summary>
-void UpdateGrounding ()
+	/// <summary>
+	/// Updates bool grounded 
+	/// </summary>
+	void UpdateGrounding ()
 	{
 		
 		Vector2 groudCheckCenter = new Vector2 (transform.position.x + groundCheckOffset.x, transform.position.y + groundCheckOffset.y);
