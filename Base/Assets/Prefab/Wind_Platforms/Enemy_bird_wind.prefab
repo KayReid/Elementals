@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.604243, y: 0.32553113}
+  m_Offset: {x: -1.5021832, y: -0.12710029}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7102398, y: 2.9531877}
+  m_Size: {x: 3.3633294, y: 3.5435762}
   m_EdgeRadius: 0
 --- !u!61 &61935455516150558
 BoxCollider2D:
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.6338372, y: -0.1479702}
+  m_Offset: {x: 1.4924163, y: -0.2070077}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -186,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.295945, y: 2.8348165}
+  m_Size: {x: 2.8703196, y: 3.7400804}
   m_EdgeRadius: 0
 --- !u!114 &114636124881694072
 MonoBehaviour:
@@ -216,10 +216,7 @@ MonoBehaviour:
   leftCheck: {fileID: 61471569251551634}
   rightCheck: {fileID: 61935455516150558}
   canShoot: 0
-  canMove: 1
   rateOfFire: 0
-  minSpeed: 2
-  maxSpeed: 5
 --- !u!212 &212323474226563344
 SpriteRenderer:
   m_ObjectHideFlags: 1

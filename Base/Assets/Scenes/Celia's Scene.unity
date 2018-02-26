@@ -7416,6 +7416,21 @@ Prefab:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 58000995414646822, guid: a6f4874e80c36435d983bd6d7635febf,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61471569251551634, guid: a6f4874e80c36435d983bd6d7635febf,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61935455516150558, guid: a6f4874e80c36435d983bd6d7635febf,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6f4874e80c36435d983bd6d7635febf, type: 2}
   m_IsPrefabParent: 0
