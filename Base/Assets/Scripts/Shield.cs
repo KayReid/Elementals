@@ -28,31 +28,7 @@ public class Shield : MonoBehaviour {
 
 		print (circle.enabled);
 	}
-	/*
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.CompareTag ("enemy")) {
-			circle.enabled = true;
-			print (circle.enabled);
-			print ("Enemy Attack");
-			Enemy enemy = other.GetComponent<Enemy> ();
-			enemy.leftCheck.isTrigger = false;
-			enemy.rightCheck.isTrigger = false;
-			enemy.body.isTrigger = false;
-		}
 
-	}
-
-	void OnTriggerExit2D (Collider2D other) {
-		if (other.CompareTag ("enemy")) {
-			Enemy enemy = other.GetComponent<Enemy> ();
-			enemy.leftCheck.isTrigger = true;
-			enemy.rightCheck.isTrigger = true;
-			enemy.body.isTrigger = true;
-		}
-	}
-
-*/
 	IEnumerator KillAfterSeconds (float seconds)
 	{
 		yield return new WaitForSeconds (seconds);

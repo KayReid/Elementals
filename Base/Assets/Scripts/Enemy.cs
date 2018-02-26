@@ -13,14 +13,19 @@ public class Enemy : MonoBehaviour {
 	public Sprite[] frames;
 	[Tooltip("How fast does the animation play")]
 	public float seconds;
+	[Tooltip("Prefab to be instantiated when shooting (Snowball)")]
+	public GameObject snowballPrefab;
 
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
 	public float speed = 3;
-	public CircleCollider2D body;
+	public Collider2D body;
 	public Collider2D leftCheck = null;
 	public Collider2D rightCheck = null;
 	public bool canShoot; 	// Birds cannot shoot, Ghosts can shoot (Set bird's canShoot as false and ghost's as true)
+	public float rateOfFire;
+	private float lastTimeFired = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -32,19 +37,22 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (leftCheck.IsTouchingLayers (obstacleLayers)) {
-			dir = 1;
-			spriteRenderer.flipX = false;
-		}
+		if (leftCheck != null && rightCheck != null) {
+			if (leftCheck.IsTouchingLayers (obstacleLayers)) {
+				dir = 1;
+				spriteRenderer.flipX = false;
+			}
 
-		if (rightCheck.IsTouchingLayers (obstacleLayers)) {
-			dir = -1;
-			spriteRenderer.flipX = true;
-		}
-		// print (dir);
-		transform.position += Vector3.right * dir * speed * Time.deltaTime;
+			if (rightCheck.IsTouchingLayers (obstacleLayers)) {
+				dir = -1;
+				spriteRenderer.flipX = true;
+			}
+			// print (dir);
+			transform.position += Vector3.right * dir * speed * Time.deltaTime;
 
-		if (canShoot) {
+		}
+		if (canShoot && (lastTimeFired + 1 / rateOfFire) < Time.time) {
+			lastTimeFired = Time.time;
 			Shoot ();
 		}
 
@@ -108,7 +116,14 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Shoot () {
-		
+		// Create the new projectile a bit in front of the spaceship and store the reference to the new gameobject.
+		// the Instatiate function creates a new GameObject copy (clone) from a Prefab at a specific location and orientation.
+
+		GameObject snowballObject = Instantiate(snowballPrefab, transform.position + new Vector3 (dir, 0, 0), Quaternion.identity) as GameObject;
+		// Get access to the script on the new snowbball using GetComponent to modify it.
+		SnowBall snowball = snowballObject.GetComponent<SnowBall> ();
+		snowball.direction.x = dir;
+
 	}
 
 }
