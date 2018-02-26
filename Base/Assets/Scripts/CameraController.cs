@@ -29,27 +29,37 @@ public class CameraController : MonoBehaviour {
             return;
         }
 
-        //Vector3 newPos = transform.position;
-        //Vector3 
-
+        // Calculating the new player position and following this
         Vector3 newPos = transform.position;
         Vector3 targetPosition = target.position + offset;
-        //Vector3 targetLerp = Vector3.Lerp(newPos, targetPosition, Time.deltaTime * lerp);
-
-        //if ((newPos - targetLerp).magnitude > minSpeed * Time.deltaTime)
-        //{
-        //    newPos = targetLerp;
-        //}
+       
+        // Creates a smoother animation - the farther the target from its original place, the faster the camera moves to catch it.
         if ((newPos - targetPosition).magnitude > minSpeed * Time.deltaTime)
         {
             Vector3 targetDir = targetPosition - newPos;
             targetDir.Normalize();
             newPos += targetDir * (Time.deltaTime * minSpeed);
+            newPos.x = 0;
+            newPos.y = Mathf.Clamp(newPos.y, yMin, yMax);
         }
+
+        // Prevents the camera from moving in the x direction, will keep the y position from moving too far outside what we want
         newPos.x = 0;
         newPos.y = Mathf.Clamp(newPos.y, yMin, yMax);
         
-        transform.position = newPos;
+        // Will only keep the camera moving up - if the player moves back down, the camera will stay in place.
+        if (newPos.y >= transform.position.y)
+        {
+            transform.position = newPos;
+        }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Player player = collision.GetComponent<Player>();
+            player.ExitScreen();
+        }
+    }
 }
