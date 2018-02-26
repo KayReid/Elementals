@@ -9,8 +9,8 @@ public class CameraController : MonoBehaviour {
     [SerializeField] Transform target = null;
     [SerializeField] float minSpeed = 5;
     
-
     [Tooltip("Global maximum y value of the cameras postion.")]
+    [SerializeField] float yMin = 0;
     [SerializeField] float yMax = 10;
 
     static CameraController instance;
@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour {
             newPos += targetDir * (Time.deltaTime * minSpeed);
         }
         newPos.x = 0;
-        newPos.y = Mathf.Clamp(newPos.y, 1, yMax);
+        newPos.y = Mathf.Clamp(newPos.y, yMin, yMax);
         
         transform.position = newPos;
     }

@@ -60,7 +60,26 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-	IEnumerator blinkCoroutine (int numBlinks, float seconds) {
+    /// <summary>
+    /// Destroy the enemy and spawn the death animation.
+    /// </summary>
+    public void Die()
+    {
+        // Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
+        StartCoroutine(blinkCoroutine(3, 0.2f));
+        Invoke("Remove", 2);
+    }
+
+    /// <summary>
+	/// Remove the enemy.
+	/// </summary>
+	public void Remove()
+    {
+        Destroy(gameObject);
+    }
+
+
+    IEnumerator blinkCoroutine (int numBlinks, float seconds) {
 		for (int i=0; i<numBlinks*2; i++) { 	// *2 is necessary because we want renderer.enabled = true and false 
 			// back and forth 3 times
 			//toggle renderer

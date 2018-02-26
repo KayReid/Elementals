@@ -11,9 +11,10 @@ public class PlatformerController2D : MonoBehaviour
 	[Header ("Controls")]
 	[HideInInspector] public Vector2 input;	// horizontal movement
 	[HideInInspector] public bool inputJump;	// jumping (whether space is pressed or not)
-	[HideInInspector] public bool inputItem;	// Use Item (whether A is pressed or not)
+	[HideInInspector] public bool inputItem;	// Use Item (whether X is pressed or not)
+    [HideInInspector] public bool inputFire;    // Shoot (whether C is pressed or not)
 
-	[Header ("Grounding")]
+    [Header ("Grounding")]
 	[Tooltip ("Offset of the grounding raycasts (red lines)")]
 	[SerializeField] Vector2 groundCheckOffset = new Vector2 (0, -0.6f); // set the location of the raycast // -1.3
 	[Tooltip ("Width of the grounding raycasts.")]
@@ -25,19 +26,28 @@ public class PlatformerController2D : MonoBehaviour
 	[Tooltip ("Layers to be considered ground.")]
 	[SerializeField] LayerMask groundLayers = 0;
 
-	public static PlatformerController2D instance;
-	public GameObject shieldPrefab;
+    [Header ("Shooting")]
+    [Tooltip("How fast is the player shooting")]
+    public float rateOfFire = 2;
+    [Tooltip("Prefab to be instantiated when shooting (Projectile)")]
+    public GameObject projectilePrefab;
+
+
+    public GameObject shieldPrefab;
+    public static PlatformerController2D instance;
 	private float speed = 5f; 	// horizontal movement speed
 	private bool grounded = false; 	// on ground or not
 	private float gravity = 5f;
 	private Rigidbody2D rb;
 	private float jumpForce = 10f;
-	// private float lastGroundingTime = 0;
+    private float lastTimeFired = 0;
+    // private float lastGroundingTime = 0;
 
 
-	void Start () {
+    void Start () {
 		instance = this;
 		inputItem = false;
+        inputFire = false;
 		// print (inputItem);
 		// grounded = false;
 		rb = GetComponent <Rigidbody2D> ();
@@ -66,11 +76,16 @@ public class PlatformerController2D : MonoBehaviour
 		// if (Coins.instance.canUseItem && inputItem) {
 		if (CoinPanel.instance.canUseItem() && inputItem) {
 			UseItem ();
+		}
 
+        // if the fire button is pressed and we waited long enough since the last shot was fired, FIRE!
+        if (inputFire && (lastTimeFired + 1 / rateOfFire) < Time.time)
+        {
+            lastTimeFired = Time.time;
+            Fire();
+        }
+    }
 
-			// print ("Use the item");
-		}	
-	}
 
 	Vector2 ApplyJump (Vector2 velocity) {
 		velocity.y = jumpForce; // amount of jump
@@ -85,10 +100,19 @@ public class PlatformerController2D : MonoBehaviour
 
 	}
 
-	/// <summary>
-	/// Updates bool grounded 
-	/// </summary>
-	void UpdateGrounding ()
+    /// <summary>
+    /// Helper function to include the shooting behavior.
+    /// </summary>
+    void Fire()
+    {
+        // Shooting up
+        Instantiate(projectilePrefab, transform.position + Vector3.up, Quaternion.identity);
+    }
+
+/// <summary>
+/// Updates bool grounded 
+/// </summary>
+void UpdateGrounding ()
 	{
 		
 		Vector2 groudCheckCenter = new Vector2 (transform.position.x + groundCheckOffset.x, transform.position.y + groundCheckOffset.y);
