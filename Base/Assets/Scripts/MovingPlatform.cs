@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour {
 	
-	private GameObject target=null;
-	private Vector3 offset;
+	/// <summary>The objects initial position.</summary>
+	private Vector2 startPosition;
+	/// <summary>The objects updated position for the next frame.</summary>
+	private Vector2 newPosition;
 
-	// Update is called once per frame
-	void Update () {
-		transform.position = new Vector3(Mathf.PingPong(Time.time, 3), transform.position.y, transform.position.z);
+	/// <summary>The speed at which the object moves.</summary>
+	[SerializeField] private int speed = 3;
+	/// <summary>The maximum distance the object may move in either y direction.</summary>
+	[SerializeField] private int maxDistance = 1;
+
+	void Start()
+	{
+		startPosition = transform.position;
+		newPosition = transform.position;
 	}
 
-	void Start(){
-		target = null;
-	}
-	void OnTriggerStay2D(Collider2D col){
-		target = col.gameObject;
-		offset = target.transform.position - transform.position;
-	}
-	void OnTriggerExit2D(Collider2D col){
-		target = null;
-	}
-	void LateUpdate(){
-		if (target != null) {
-			target.transform.position = transform.position + offset;
-		}
+	void Update()
+	{
+		newPosition.x = startPosition.x + (maxDistance * Mathf.Sin(Time.time * speed));
+		transform.position = newPosition;
 	}
 }
 
