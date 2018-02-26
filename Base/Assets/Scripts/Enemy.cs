@@ -20,11 +20,12 @@ public class Enemy : MonoBehaviour {
 	public CircleCollider2D body;
 	public Collider2D leftCheck = null;
 	public Collider2D rightCheck = null;
-
+	public bool canShoot; 	// Birds cannot shoot, Ghosts can shoot (Set bird's canShoot as false and ghost's as true)
 
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		spriteRenderer.enabled = true;
 		StartCoroutine(PlayAnimation());
 	}
 	
@@ -43,7 +44,9 @@ public class Enemy : MonoBehaviour {
 		// print (dir);
 		transform.position += Vector3.right * dir * speed * Time.deltaTime;
 
-
+		if (canShoot) {
+			Shoot ();
+		}
 
 	}
 
@@ -57,6 +60,21 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+	IEnumerator blinkCoroutine (int numBlinks, float seconds) {
+		for (int i=0; i<numBlinks*2; i++) { 	// *2 is necessary because we want renderer.enabled = true and false 
+			// back and forth 3 times
+			//toggle renderer
+			spriteRenderer.enabled = !spriteRenderer.enabled;
+			spriteRenderer.material.color = Color.red;
+			//wait for a bit
+			yield return new WaitForSeconds(seconds);
+		}
+
+		//make sure renderer is enabled when we exit
+		spriteRenderer.enabled = true;
+		spriteRenderer.material.color = Color.white;
+
+	}
 
     IEnumerator PlayAnimation() {
 		int currentFrameIndex = 0;
@@ -70,5 +88,8 @@ public class Enemy : MonoBehaviour {
 
 	}
 
+	void Shoot () {
+		
+	}
 
 }

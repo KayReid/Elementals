@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Celia's Scene.unity
+    guid: 99305915f13e741e09aa4344317c89c6
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 130000b2bef924c49bbdcdf827dc3215
