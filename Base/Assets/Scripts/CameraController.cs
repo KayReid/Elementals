@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour {
             newPos += targetDir * (Time.deltaTime * minSpeed);
         }
         newPos.x = 0;
-        newPos.y = Mathf.Clamp(newPos.y, 0, yMax);
+        newPos.y = Mathf.Clamp(newPos.y, 1, yMax);
         
         transform.position = newPos;
     }
