@@ -25,5 +25,13 @@ public class MovingPlatform : MonoBehaviour {
 		newPosition.x = startPosition.x + (maxDistance * Mathf.Sin(Time.time * speed));
 		transform.position = newPosition;
 	}
+
+	void onCollisionEnter2D(Collider other){
+		if(other.gameObject.tag == "Player")
+		{
+			//This will make the player a child of the Obstacle
+			other.gameObject.transform.parent = this.gameObject.transform; 
+		}
+	}
 }
 
