@@ -94,6 +94,7 @@ MonoBehaviour:
   input: {x: 0, y: 0}
   inputJump: 0
   inputItem: 0
+  inputFire: 0
   groundCheckOffset: {x: 0, y: -0.65}
   groundCheckWidth: 0.7
   groundCheckDepth: 0.2
@@ -101,6 +102,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  rateOfFire: 2
+  projectilePrefab: {fileID: 1077563464314994, guid: c751b65d7037349cda5f5bf2a10e4bc2,
+    type: 2}
   shieldPrefab: {fileID: 1469284339564070, guid: eb4c21d2204944c8482e190db95cd69e,
     type: 2}
 --- !u!114 &114375550090014612

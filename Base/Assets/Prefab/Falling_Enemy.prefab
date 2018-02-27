@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4034752293797586}
   - component: {fileID: 212396907444461924}
-  - component: {fileID: 114566058217768546}
+  - component: {fileID: 114380981945461656}
+  - component: {fileID: 58137923663521212}
   m_Layer: 0
   m_Name: Falling_Enemy
   m_TagString: Untagged
@@ -35,13 +36,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822740604602158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: 47.28, z: 0}
+  m_LocalPosition: {x: -1.8576257, y: 1.2201473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114566058217768546
+--- !u!58 &58137923663521212
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822740604602158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.57
+--- !u!114 &114380981945461656
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,28 +65,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822740604602158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d15b2a62499194ef79949f7a9dd11c6f, type: 3}
+  m_Script: {fileID: 11500000, guid: e05def13746bb497f954265894e3ba36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleLayers:
-    serializedVersion: 2
-    m_Bits: 3072
   frames:
   - {fileID: 21300090, guid: 49e9bf074b6e3413fa9d5b566d2fdbb6, type: 3}
   - {fileID: 21300094, guid: 49e9bf074b6e3413fa9d5b566d2fdbb6, type: 3}
-  seconds: 0
-  snowballPrefab: {fileID: 0}
-  deadPrefab: {fileID: 1468200349028784, guid: 513bb92dfed77408a86150e1fe8adaa0, type: 2}
-  dir: 1
-  speed: 0
-  body: {fileID: 0}
-  leftCheck: {fileID: 0}
-  rightCheck: {fileID: 0}
-  canShoot: 0
-  canMove: 0
-  rateOfFire: 0
   minSpeed: 2
   maxSpeed: 5
+  seconds: 0.3
+  deadPrefab: {fileID: 1468200349028784, guid: 513bb92dfed77408a86150e1fe8adaa0, type: 2}
 --- !u!212 &212396907444461924
 SpriteRenderer:
   m_ObjectHideFlags: 1
