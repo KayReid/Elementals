@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     //public bool ground;
 
 
-
-
 	void Awake ()
 	{
 		instance = this;

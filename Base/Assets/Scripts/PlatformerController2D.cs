@@ -44,7 +44,7 @@ public class PlatformerController2D : MonoBehaviour
     // private float lastGroundingTime = 0;
 
     private Animator playerAnim;
-
+	SpriteRenderer spriteRenderer;
 
     void Start () {
 		instance = this;
@@ -54,6 +54,7 @@ public class PlatformerController2D : MonoBehaviour
 		// grounded = false;
 		rb = GetComponent <Rigidbody2D> ();
         playerAnim = GetComponent<Animator>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
 
       //  playerRigidBody = GetComponent<Rigidbody2D>();
 	}
@@ -70,11 +71,13 @@ public class PlatformerController2D : MonoBehaviour
 		// horizontal right
         if(velocity.x > 0) {
             velocity = new Vector2(speed, velocity.y);
-            transform.localScale = new Vector3(1f, 1f, 1f);
+			spriteRenderer.flipX = false;
+            // transform.localScale = new Vector3(1f, 1f, 1f);
         }
         if (velocity.x < 0) {
             velocity = new Vector2(-speed, velocity.y);
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+			spriteRenderer.flipX = true;
+            // transform.localScale = new Vector3(-1f, 1f, 1f);
         } else { // Reduce sliding movement
             rb.velocity = new Vector3(0, velocity.y, 0f);
         }
