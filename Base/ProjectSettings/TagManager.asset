@@ -8,6 +8,8 @@ TagManager:
   - moving_platform
   - enemy
   - shield
+  - KillPlane
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
