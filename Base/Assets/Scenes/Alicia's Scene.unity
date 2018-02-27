@@ -2408,6 +2408,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 58751919488276340, guid: 7e2d59e34a1590644aee605e13d5d0b1,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e2d59e34a1590644aee605e13d5d0b1, type: 2}
   m_IsPrefabParent: 0
@@ -3310,7 +3315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c3b5df64bde2246bc0a429b1805ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   maxDistance: 2
 --- !u!60 &890948096
 PolygonCollider2D:
@@ -3723,6 +3728,28 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a06772679346e3c42a11d4f56f46a151, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1106684934 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1803221510507400, guid: a06772679346e3c42a11d4f56f46a151,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106684933}
+--- !u!95 &1106684935
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106684934}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9789c4d8c285dc84ab61a069663fa8b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1117397085
 Prefab:
   m_ObjectHideFlags: 0
