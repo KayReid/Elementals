@@ -12,6 +12,12 @@ public class Player : MonoBehaviour
 	Renderer rend;
 	public static Player instance;
 
+    // PlatformerController2D controller;
+    //public bool ground;
+
+
+
+
 	void Awake ()
 	{
 		instance = this;
@@ -19,8 +25,11 @@ public class Player : MonoBehaviour
 		rend.enabled = true;
 
 	}
-		
-	IEnumerator blinkCoroutine (int numBlinks, float seconds) {
+
+
+
+
+    IEnumerator blinkCoroutine (int numBlinks, float seconds) {
 		for (int i=0; i<numBlinks*2; i++) { 	// *2 is necessary because we want renderer.enabled = true and false 
 			// back and forth 3 times
 			//toggle renderer

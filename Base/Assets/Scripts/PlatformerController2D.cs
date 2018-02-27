@@ -43,6 +43,8 @@ public class PlatformerController2D : MonoBehaviour
     private float lastTimeFired = 0;
     // private float lastGroundingTime = 0;
 
+    private Animator playerAnim;
+
 
     void Start () {
 		instance = this;
@@ -51,6 +53,9 @@ public class PlatformerController2D : MonoBehaviour
 		// print (inputItem);
 		// grounded = false;
 		rb = GetComponent <Rigidbody2D> ();
+        playerAnim = GetComponent<Animator>();
+
+      //  playerRigidBody = GetComponent<Rigidbody2D>();
 	}
 
 	/// <summary>
@@ -60,8 +65,23 @@ public class PlatformerController2D : MonoBehaviour
 		UpdateGrounding ();
 
 		Vector2 velocity = rb.velocity;
-		// horizontal
-		velocity.x = input.x * speed;
+        velocity.x = input.x * speed;
+
+		// horizontal right
+        if(velocity.x > 0) {
+            velocity = new Vector2(speed, velocity.y);
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        if (velocity.x < 0) {
+            velocity = new Vector2(-speed, velocity.y);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        } else { // Reduce sliding movement
+            rb.velocity = new Vector3(0, velocity.y, 0f);
+        }
+
+        transform.localScale = new Vector3(1f, 1f, 1f); // x = 1, Scale Player's animation facing right
+
+
 		if (inputJump && grounded) {
 			velocity = ApplyJump (velocity);
 
@@ -69,6 +89,8 @@ public class PlatformerController2D : MonoBehaviour
 
 		velocity.y += -gravity * Time.deltaTime;
 		rb.velocity = velocity;
+
+
 
 	}
 
@@ -84,9 +106,16 @@ public class PlatformerController2D : MonoBehaviour
             lastTimeFired = Time.time;
             Fire();
         }
+
+        playerAnim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        playerAnim.SetBool("Grounded", grounded);
+
     }
-
-
+    /*
+    public bool getGrounded() {
+        return grounded;
+    }
+    */
 	Vector2 ApplyJump (Vector2 velocity) {
 		velocity.y = jumpForce; // amount of jump
 		grounded = false;

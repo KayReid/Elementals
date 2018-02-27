@@ -9,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlatformerController2D))]
 public class PlayerInputModule2D : MonoBehaviour
 {
+
     PlatformerController2D controller;
 
     void Start()
