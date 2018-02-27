@@ -26,7 +26,8 @@ public class MovingPlatform : MonoBehaviour {
 		transform.position = newPosition;
 	}
 
-	//If character collides with the platform, make it its child.
+	/*
+	//if character collides with the platform, make it a child.
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Player") {
 			MakeChild ();   
@@ -48,6 +49,19 @@ public class MovingPlatform : MonoBehaviour {
 		Player player = GetComponent<Player> ();
 		player.transform.parent = null;
 	}   
+	*/
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.transform.tag == "Player") {
+			other.transform.parent = transform;
+		}
+	}
+
+	private void OnCollisionExit2D(Collision2D other) {
+		if (other.transform.tag == "Player") {
+			other.transform.parent = null;
+		}
+	}
 }
 
 
