@@ -13,7 +13,8 @@ public class FallingEnemy : MonoBehaviour {
 	[Tooltip("How fast does the animation play")]
 	public float seconds;
 	public GameObject deadPrefab;
-
+	[SerializeField] LayerMask shieldLayers = 0;
+	public Collider2D body = null; // 
 
 
 	// Use this for initialization
@@ -23,6 +24,12 @@ public class FallingEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (body != null) {
+			if (body.IsTouchingLayers (shieldLayers)) {
+				Destroy (gameObject);
+
+			}
+		}
 		transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
 	}
 

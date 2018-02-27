@@ -14,7 +14,7 @@ public class Ghost : MonoBehaviour {
 	public float seconds;
 
 	SpriteRenderer spriteRenderer;
-	public int dir = 1;
+	public int dir = -1;
 	public float speed;
 	public Collider2D body;
 	public float rateOfFire;
