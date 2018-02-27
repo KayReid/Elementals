@@ -9,7 +9,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
     [Tooltip("How fast is the projectile moving upwards")]
-    public float speed = 10;
+    public float speed = 13;
     [Tooltip("After how many seconds is the projectile destroyed")]
     public float lifeTime = 3;
     [Tooltip("The direction the projectile travels")]
@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour {
         transform.position += new Vector3(direction.x, direction.y, 0) * speed * Time.deltaTime;
     }
 
-    // Will destroy an object if it is an enemy. Will disappear once it hits something.
+    // Will destroy an object if it is an enemy.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("enemy"))
