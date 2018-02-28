@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
 	Renderer rend;
 	public static Player instance;
+    public GameObject deathEffect;
+
 
     // PlatformerController2D controller;
     //public bool ground;
@@ -42,7 +44,12 @@ public class Player : MonoBehaviour
 		rend.material.color = Color.white;
 
 	}
-		
+	
+    IEnumerator explosionEffect() {
+        instance.gameObject.SetActive(false);
+        Instantiate(deathEffect, instance.transform.position, instance.transform.rotation);
+        yield return new WaitForSeconds(1);
+    }
 
 	/// <summary>
 	/// Destroy the player and spawn the death animation.
@@ -50,7 +57,8 @@ public class Player : MonoBehaviour
 	public void Die ()
 	{
 		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
-		StartCoroutine (blinkCoroutine (3, 0.2f));
+		//StartCoroutine (blinkCoroutine (3, 0.2f));
+        StartCoroutine(explosionEffect());
 		Invoke ("Remove" , 1);
         // restart level here
         GameManager.instance.RestartTheGameAfterSeconds(2);
