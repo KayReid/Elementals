@@ -46,12 +46,8 @@ public class CameraController : MonoBehaviour {
         // Prevents the camera from moving in the x direction, will keep the y position from moving too far outside what we want
         newPos.x = 0;
         newPos.y = Mathf.Clamp(newPos.y, yMin, yMax);
-        
-        // Will only keep the camera moving up - if the player moves back down, the camera will stay in place.
-        if (newPos.y >= transform.position.y)
-        {
-            transform.position = newPos;
-        }
+
+        transform.position = newPos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

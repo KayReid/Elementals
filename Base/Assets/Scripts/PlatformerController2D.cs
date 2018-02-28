@@ -79,7 +79,7 @@ public class PlatformerController2D : MonoBehaviour
 			spriteRenderer.flipX = true;
             // transform.localScale = new Vector3(-1f, 1f, 1f);
         } else { // Reduce sliding movement
-            rb.velocity = new Vector3(0, velocity.y, 0f);
+            rb.velocity = new Vector2(0, velocity.y);
         }
 
         transform.localScale = new Vector3(1f, 1f, 1f); // x = 1, Scale Player's animation facing right
