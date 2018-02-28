@@ -11,8 +11,6 @@ public class SnowBall : MonoBehaviour {
 	public float lifeTime = 3;
 	[Tooltip ("The direction the snowball travels")]
 	public Vector2 direction;
-	[SerializeField] LayerMask shieldLayers = 0;
-	public Collider2D check = null; // 
 
 	void Start ()
 	{
@@ -24,23 +22,20 @@ public class SnowBall : MonoBehaviour {
 	void Update ()
 	{
 		
-		if (check != null) {
-			if (check.IsTouchingLayers (shieldLayers)) {
-				direction.x = 1;
-				print ("touch");
-				Destroy (gameObject);
-			}
-			transform.position += new Vector3 (direction.x, 0, 0) * speed * Time.deltaTime;
-		}
+		transform.position += new Vector3 (direction.x, 0, 0) * speed * Time.deltaTime;
+
 	}
 		
 
 	void OnCollisionStay2D(Collision2D col)
 	{
-		if (col.collider.CompareTag("Player"))
-		{
+		if (col.collider.CompareTag("Player")) {
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
+			Destroy (gameObject);
+		}
+
+		if (col.collider.CompareTag ("shield")) {
 			Destroy (gameObject);
 		}
 	}

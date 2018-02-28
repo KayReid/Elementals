@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212051512200371988}
   - component: {fileID: 114078100730896820}
   - component: {fileID: 58409657321039142}
+  - component: {fileID: 50780810514351410}
   m_Layer: 11
   m_Name: shield
   m_TagString: shield
@@ -42,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50780810514351410
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469284339564070}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58409657321039142
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -69,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 7
-  circle: {fileID: 58409657321039142}
 --- !u!212 &212051512200371988
 SpriteRenderer:
   m_ObjectHideFlags: 1

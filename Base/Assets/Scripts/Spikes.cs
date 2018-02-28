@@ -22,9 +22,7 @@ public class Spikes : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D col)
     {
-		if (col.collider.CompareTag ("shield")) {			
-			// Player.instance.transform.position.y += 0.3f;
-		}
+
         if (col.collider.CompareTag("Player"))
         {
             Player player = col.transform.root.GetComponentInChildren<Player>();
@@ -32,5 +30,7 @@ public class Spikes : MonoBehaviour {
         }
 
     }
+
+
 
 }
