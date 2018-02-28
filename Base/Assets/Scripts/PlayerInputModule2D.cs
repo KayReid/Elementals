@@ -12,18 +12,26 @@ public class PlayerInputModule2D : MonoBehaviour
 
     PlatformerController2D controller;
 
+    private bool inputJump = false;
+
     void Start()
     {
         controller = GetComponent<PlatformerController2D>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+            inputJump = true;
     }
 
     void FixedUpdate()
     {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Horizontal"));
         controller.input = input;
-        controller.inputJump = Input.GetButtonDown("Jump");
+        controller.inputJump = inputJump;
         controller.inputItem = Input.GetKeyDown(KeyCode.X);
         controller.inputFire = Input.GetKeyDown(KeyCode.C);
+        inputJump = false;
     }
-
 }

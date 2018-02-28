@@ -61,8 +61,10 @@ public class Enemy : MonoBehaviour {
     /// </summary>
     public void Die()
     {
+		
         StartCoroutine(blinkCoroutine(3, 0.2f));
-        Invoke("Remove", 2);
+		Destroy(gameObject);
+        //Invoke("Remove", 2);
     }
 
     /// <summary>
