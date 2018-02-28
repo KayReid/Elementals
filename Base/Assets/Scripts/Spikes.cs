@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spikes : MonoBehaviour {
-
-	// public PolygonCollider2D spikeCollider;
-	// Use this for initialization
-	// public LayerMask shieldLayers = 0;
+    
 	public Collider2D check = null; // 
 
 	void Start () {
@@ -30,7 +27,5 @@ public class Spikes : MonoBehaviour {
         }
 
     }
-
-
-
+    
 }

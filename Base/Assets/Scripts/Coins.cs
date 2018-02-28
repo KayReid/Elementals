@@ -11,6 +11,7 @@ public class Coins : MonoBehaviour {
 	// frames of coins (Rotating)
 	public Sprite[] frames;
 	private SpriteRenderer spriteRenderer;
+    public AudioClip collectSound;
 
 
 	public static Coins instance;
@@ -27,7 +28,8 @@ public class Coins : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		// if the other object has the player tag...
 		if (other.CompareTag ("Player")) {
-			// Player player = other.GetComponent<Player> ();
+            // Player player = other.GetComponent<Player> ();
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
 			CoinPanel.instance.CollectCoins ();
 			Destroy (gameObject);
 		}

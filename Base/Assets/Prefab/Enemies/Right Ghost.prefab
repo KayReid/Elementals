@@ -9,82 +9,82 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1217095222735776}
+  m_RootGameObject: {fileID: 1258865744094404}
   m_IsPrefabParent: 1
---- !u!1 &1217095222735776
+--- !u!1 &1258865744094404
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4342508158231138}
-  - component: {fileID: 212893161948343668}
-  - component: {fileID: 114372544803224098}
-  - component: {fileID: 58746966436206586}
+  - component: {fileID: 4198143188712772}
+  - component: {fileID: 212913130355559142}
+  - component: {fileID: 70735158605568112}
+  - component: {fileID: 114126668703080836}
   m_Layer: 0
-  m_Name: Fire Falling_Enemy
+  m_Name: Right Ghost
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4342508158231138
+--- !u!4 &4198143188712772
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1217095222735776}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5503633, y: 1.6361465, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1258865744094404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1814733, y: 12.445586, z: -1.3286865}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58746966436206586
-CircleCollider2D:
+--- !u!70 &70735158605568112
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1217095222735776}
+  m_GameObject: {fileID: 1258865744094404}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.57
---- !u!114 &114372544803224098
+  m_Size: {x: 0.51, y: 0.72}
+  m_Direction: 0
+--- !u!114 &114126668703080836
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1217095222735776}
+  m_GameObject: {fileID: 1258865744094404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e05def13746bb497f954265894e3ba36, type: 3}
+  m_Script: {fileID: 11500000, guid: 508eb059594484c508178b16a9e23f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowballPrefab: {fileID: 1646937443227364, guid: 205f62d327a0d45069922e6e1acf5289,
+    type: 2}
+  deadPrefab: {fileID: 1863925362903422, guid: 2db650ab69fd844449ed24a2fc57dc98, type: 2}
   frames:
-  - {fileID: 21300090, guid: d862292995c15dd4582bd3f9e66d1f20, type: 3}
-  - {fileID: 21300094, guid: d862292995c15dd4582bd3f9e66d1f20, type: 3}
-  minSpeed: 2
-  maxSpeed: 5
-  seconds: 0.3
-  deadPrefab: {fileID: 1093869451538172, guid: 146cd6397e4986e43b39cc7a83404b81, type: 2}
-  shieldLayers:
-    serializedVersion: 2
-    m_Bits: 2048
-  body: {fileID: 58746966436206586}
---- !u!212 &212893161948343668
+  - {fileID: 21300010, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
+  - {fileID: 21300006, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
+  seconds: 3
+  dir: -1
+  speed: 0
+  body: {fileID: 70735158605568112}
+  rateOfFire: 0.5
+--- !u!212 &212913130355559142
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1217095222735776}
+  m_GameObject: {fileID: 1258865744094404}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -112,13 +112,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300090, guid: d862292995c15dd4582bd3f9e66d1f20, type: 3}
-  m_Color: {r: 1, g: 0.41176468, b: 0.41176468, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.14, y: 1.12}
+  m_Size: {x: 0.51, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

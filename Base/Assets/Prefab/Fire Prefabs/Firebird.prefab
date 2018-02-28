@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1875284650243364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5166855, y: 4.210073, z: -1.3286865}
+  m_LocalPosition: {x: -5.56, y: 1.25, z: -1.3286865}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4966455803312066}
@@ -132,7 +132,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.27658463, y: -0.06914616}
@@ -208,15 +208,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 07e252e55ba5146be9320141ca365705, type: 3}
   - {fileID: 21300000, guid: 0d486abe9479f4e0d83a38e3b9d03be2, type: 3}
   seconds: 0.1
-  snowballPrefab: {fileID: 0}
-  deadPrefab: {fileID: 0}
-  dir: 1
   speed: 3
-  body: {fileID: 58751919488276340}
   leftCheck: {fileID: 61170708357046484}
   rightCheck: {fileID: 61686660825122960}
-  canShoot: 0
-  rateOfFire: 0
+  dir: 1
 --- !u!212 &212108668465073044
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -250,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4f03ee746b1a74f8ebde7bc72c78d8b7, type: 3}
   m_Color: {r: 0.99264705, g: 0.6350022, b: 0.6350022, a: 1}
   m_FlipX: 0

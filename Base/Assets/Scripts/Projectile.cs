@@ -14,6 +14,8 @@ public class Projectile : MonoBehaviour {
     public float lifeTime = 3;
     [Tooltip("The direction the projectile travels")]
     public Vector2 direction = new Vector2(0, 1);
+    [Tooltip("Sound played when projectile is shot.")]
+    public AudioClip shootSound;
 
     // Use this for initialization
     void Start()
@@ -21,6 +23,7 @@ public class Projectile : MonoBehaviour {
         StartCoroutine(KillAfterSeconds(lifeTime));
         // normalize direction so it does not impact the travel speed
         direction.Normalize();
+        AudioSource.PlayClipAtPoint(shootSound, transform.position);
     }
 
     // Update is called once per frame. This moves the object upwards at speed.
