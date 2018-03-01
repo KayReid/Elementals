@@ -10,6 +10,7 @@ TagManager:
   - shield
   - KillPlane
   - Checkpoint
+  - projectile
   layers:
   - Default
   - TransparentFX

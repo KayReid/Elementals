@@ -32,16 +32,31 @@ public class Projectile : MonoBehaviour {
     }
 
     // Will destroy an object if it is an enemy.
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.CompareTag("enemy"))
 		{
-			// col.transform.root.GetComponentInChildren<Player>();
-			collision.GetComponent<Killable> ().Die ();
+			print ("Hit Enemy");
+			// collision.transform.root.GetComponentInChildren<Killable>(). Die ();
+			collision.GetComponent<Killable> ().Die (); // causing problem
 			Destroy(gameObject);
 
 		}
     }
+	/*
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.collider.CompareTag("enemy"))
+		{
+			print ("Hit Enemy");
+			// col.transform.root.GetComponentInChildren<Player>();
+			col.collider.GetComponent<Killable> ().Die ();
+			Destroy(gameObject);
+
+		}
+	}
+	*/ 
 
     /// <summary>
     /// Destroys the projectile after seconds. This is a coroutine that needs be started using StartCoroutine().

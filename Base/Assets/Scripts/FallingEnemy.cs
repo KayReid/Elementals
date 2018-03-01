@@ -12,6 +12,7 @@ public class FallingEnemy : Killable {
 	public float maxSpeed = 5;
 	[Tooltip("How fast does the animation play")]
 	public float seconds;
+	public Collider2D body;
 
 	public GameObject deathEffect;
 
@@ -28,18 +29,14 @@ public class FallingEnemy : Killable {
 		transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
 	}
 
-	void OnCollisionStay2D(Collision2D col)
-	{
-		if (col.collider.CompareTag ("shield")) {
-			// Die ();
-			StartCoroutine(explosionEffect());
-			Destroy(gameObject);
-
-		}
-		if (col.collider.CompareTag("Player")) {
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.collider.CompareTag("Player"))
+		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
-			Destroy (gameObject);
+		}
+		if (col.gameObject.tag == "shield") {
+			Die ();
 		}
 
 	}
@@ -64,18 +61,12 @@ public class FallingEnemy : Killable {
 
 
 
-	/*
-	public void Die()
-	{
-		Destroy(gameObject);
-		StartCoroutine(explosionEffect());
-
-	}
-	*/
 	public override void Die()
 	{
-		Destroy(gameObject);
+
 		StartCoroutine(explosionEffect());
+		Destroy(gameObject);
+
 	}
 
 }

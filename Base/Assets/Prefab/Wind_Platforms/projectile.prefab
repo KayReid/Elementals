@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58287809281115044}
   m_Layer: 0
   m_Name: projectile
-  m_TagString: Untagged
+  m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   speed: 10
   lifeTime: 1
   direction: {x: 0, y: 1}
+  shootSound: {fileID: 8300000, guid: f4cd77c52ba564745bcb85838ac20d4e, type: 3}
 --- !u!212 &212667277448169986
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -104,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300346, guid: 2427e52c2dc1b4e46a161950f4c9f731, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -17,6 +17,7 @@ public class Ghost : Killable {
 	public float speed;
 	public float rateOfFire;
 	private float lastTimeFired = 0;
+	public Collider2D body;
 
 	public GameObject deathEffect;
 
@@ -59,8 +60,9 @@ public class Ghost : Killable {
 	*/
 	public override void Die()
 	{
-		Destroy(gameObject);
 		StartCoroutine(explosionEffect());
+		Destroy(gameObject);
+
 	}
 
 

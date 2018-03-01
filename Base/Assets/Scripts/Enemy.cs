@@ -13,6 +13,7 @@ public class Enemy : Killable {
 	public float speed;
 	public Collider2D leftCheck ; // 
 	public Collider2D rightCheck;
+	public Collider2D body;
 
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
@@ -41,9 +42,9 @@ public class Enemy : Killable {
 				dir = -1;
 				spriteRenderer.flipX = true;
 			}
-			transform.position += Vector3.right * dir * speed * Time.deltaTime;
-		}
 
+		}
+		transform.position += Vector3.right * dir * speed * Time.deltaTime;
 	}
 
 
@@ -71,8 +72,9 @@ public class Enemy : Killable {
 
 	public override void Die()
 	{
-		Destroy(gameObject);
 		StartCoroutine(explosionEffect());
+		Destroy(gameObject);
+
 	}
 
 
