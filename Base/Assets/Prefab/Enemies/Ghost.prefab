@@ -70,15 +70,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballPrefab: {fileID: 1646937443227364, guid: 205f62d327a0d45069922e6e1acf5289,
     type: 2}
-  deadPrefab: {fileID: 1863925362903422, guid: 2db650ab69fd844449ed24a2fc57dc98, type: 2}
   frames:
   - {fileID: 21300010, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
   - {fileID: 21300006, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
   seconds: 3
   dir: -1
   speed: 0
-  body: {fileID: 70176089977496158}
   rateOfFire: 0.5
+  deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
+    type: 2}
 --- !u!212 &212749455683418596
 SpriteRenderer:
   m_ObjectHideFlags: 1

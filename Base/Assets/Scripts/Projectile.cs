@@ -34,12 +34,13 @@ public class Projectile : MonoBehaviour {
     // Will destroy an object if it is an enemy.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("enemy"))
-        {
-            Enemy other = collision.GetComponent<Enemy>();
-            other.Die();
-            Destroy(gameObject);
-        }
+		if (collision.CompareTag("enemy"))
+		{
+			// col.transform.root.GetComponentInChildren<Player>();
+			collision.GetComponent<Killable> ().Die ();
+			Destroy(gameObject);
+
+		}
     }
 
     /// <summary>
@@ -50,5 +51,8 @@ public class Projectile : MonoBehaviour {
         yield return new WaitForSeconds(seconds);
         Destroy(gameObject);
     }
+
+
+
 
 }

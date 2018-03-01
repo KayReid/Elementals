@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 60098828515046532}
   m_Layer: 0
   m_Name: spike
-  m_TagString: Untagged
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017651830303490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: -2.97, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.605746, y: -17.153738, z: -0.18321556}
   m_LocalScale: {x: 0.5792726, y: 0.6440285, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882e614f3f15541ae9ab384b85420c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  check: {fileID: 0}
+  deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
+    type: 2}
 --- !u!212 &212405620079902436
 SpriteRenderer:
   m_ObjectHideFlags: 1

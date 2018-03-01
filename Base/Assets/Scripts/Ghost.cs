@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghost : MonoBehaviour {
+public class Ghost : Killable {
 
 
 	[Tooltip("Prefab to be instantiated when shooting (Snowball)")]
 	public GameObject snowballPrefab;
-	public GameObject deadPrefab;
 	[Tooltip("The individual sprites of the animation")]
 	public Sprite[] frames;
 	[Tooltip("How fast does the animation play")]
@@ -16,10 +15,10 @@ public class Ghost : MonoBehaviour {
 	SpriteRenderer spriteRenderer;
 	public int dir = -1;
 	public float speed;
-	public Collider2D body;
 	public float rateOfFire;
 	private float lastTimeFired = 0;
-	private float timer = 0;
+
+	public GameObject deathEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +26,7 @@ public class Ghost : MonoBehaviour {
 		spriteRenderer.enabled = true;
 		StartCoroutine(PlayAnimation());
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		// Enemy Type: Ghosts that move and shoot
@@ -39,44 +38,38 @@ public class Ghost : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D col)
 	{
+		if (col.collider.CompareTag ("shield")) {
+			Die ();
+		}
 		if (col.collider.CompareTag("Player"))
 		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
 		}
+
 	}
 
-
+	/*
 	public void Die()
 	{
-		Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
-		StartCoroutine(blinkCoroutine(3, 0.2f));
-		Invoke("Remove", 2);
+		Destroy(gameObject);
+		StartCoroutine(explosionEffect());
+
 	}
-	/// <summary>
-	/// Remove the enemy.
-	/// </summary>
-	public void Remove()
+	*/
+	public override void Die()
 	{
 		Destroy(gameObject);
+		StartCoroutine(explosionEffect());
 	}
 
 
-	IEnumerator blinkCoroutine (int numBlinks, float seconds) {
-		for (int i=0; i<numBlinks*2; i++) { 	// *2 is necessary because we want renderer.enabled = true and false 
-			// back and forth 3 times
-			//toggle renderer
-			spriteRenderer.enabled = !spriteRenderer.enabled;
-			spriteRenderer.material.color = Color.red;
-			//wait for a bit
-			yield return new WaitForSeconds(seconds);
-		}
-
-		//make sure renderer is enabled when we exit
-		spriteRenderer.enabled = true;
-		spriteRenderer.material.color = Color.white;
-
+	IEnumerator explosionEffect() {
+		gameObject.SetActive(false);
+		Instantiate(deathEffect, transform.position, transform.rotation);
+		yield return new WaitForSeconds(1);
 	}
+
 
 	IEnumerator PlayAnimation() {
 		int currentFrameIndex = 0;

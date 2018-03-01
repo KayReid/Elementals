@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spikes : MonoBehaviour {
-    
-	public Collider2D check = null; // 
+
+	public GameObject deathEffect;
 
 	void Start () {
-		// spikeCollider.enabled = true;
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		//if (check.IsTouchingLayers (shieldLayers)) {
-		//	check.isTrigger = false;
-		//}
+
 	}
 
-    void OnCollisionStay2D(Collision2D col)
-    {
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.collider.CompareTag("Player"))
+		{
+			Player player = col.transform.root.GetComponentInChildren<Player>();
+			player.Die();
+		}
+		if (col.gameObject.tag == "shield") {
+			Destroy(gameObject);
+			StartCoroutine (explosionEffect ());
+		}
 
-        if (col.collider.CompareTag("Player"))
-        {
-            Player player = col.transform.root.GetComponentInChildren<Player>();
-            player.Die();
-        }
+	}
 
-    }
-    
+	IEnumerator explosionEffect() {
+		gameObject.SetActive(false);
+		Instantiate(deathEffect, transform.position, transform.rotation);
+		yield return new WaitForSeconds(1);
+	}
+
 }
