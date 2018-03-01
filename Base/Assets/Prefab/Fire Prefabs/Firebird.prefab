@@ -211,7 +211,10 @@ MonoBehaviour:
   speed: 3
   leftCheck: {fileID: 61170708357046484}
   rightCheck: {fileID: 61686660825122960}
+  body: {fileID: 0}
   dir: 1
+  deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
+    type: 2}
 --- !u!212 &212108668465073044
 SpriteRenderer:
   m_ObjectHideFlags: 1

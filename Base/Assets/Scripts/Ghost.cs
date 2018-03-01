@@ -20,6 +20,7 @@ public class Ghost : Killable {
 	public Collider2D body;
 
 	public GameObject deathEffect;
+    public AudioClip deathSound;
 
 	// Use this for initialization
 	void Start () {
@@ -61,7 +62,8 @@ public class Ghost : Killable {
 	public override void Die()
 	{
 		StartCoroutine(explosionEffect());
-		Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        Destroy(gameObject);
 
 	}
 

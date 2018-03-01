@@ -14,11 +14,12 @@ public class Enemy : Killable {
 	public Collider2D leftCheck ; // 
 	public Collider2D rightCheck;
 	public Collider2D body;
+    public AudioClip deathEffect;
 
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
 
-	public GameObject deathEffect;
+	public AudioClip deathSound;
 
 	// Use this for initialization
 	void Start () {
@@ -73,7 +74,8 @@ public class Enemy : Killable {
 	public override void Die()
 	{
 		StartCoroutine(explosionEffect());
-		Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        Destroy(gameObject);
 
 	}
 

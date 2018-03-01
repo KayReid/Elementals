@@ -15,6 +15,7 @@ public class FallingEnemy : Killable {
 	public Collider2D body;
 
 	public GameObject deathEffect;
+    public AudioClip deathSound;
 
 	// Use this for initialization
 	void Start () {
@@ -63,8 +64,8 @@ public class FallingEnemy : Killable {
 
 	public override void Die()
 	{
-
-		StartCoroutine(explosionEffect());
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        StartCoroutine(explosionEffect());
 		Destroy(gameObject);
 
 	}

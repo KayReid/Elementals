@@ -34,6 +34,7 @@ public class PlatformerController2D : MonoBehaviour
 
 
     public GameObject shieldPrefab;
+    public AudioClip jumpSound;
     public static PlatformerController2D instance;
 	private float speed = 5f; 	// horizontal movement speed
 	private bool grounded = false; 	// on ground or not
@@ -87,8 +88,9 @@ public class PlatformerController2D : MonoBehaviour
 
 		if (inputJump && grounded) {
 			velocity = ApplyJump (velocity);
+            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 
-		}
+        }
 
 		velocity.y += -gravity * Time.deltaTime;
 		rb.velocity = velocity;

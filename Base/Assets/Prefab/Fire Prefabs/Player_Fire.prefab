@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803221510507400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.92, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.38, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 1803221510507400}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92f118e12fd144cda8a2c4dad9a9ed3a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9789c4d8c285dc84ab61a069663fa8b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -209,10 +209,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   rateOfFire: 2
-  projectilePrefab: {fileID: 1077563464314994, guid: c751b65d7037349cda5f5bf2a10e4bc2,
+  projectilePrefab: {fileID: 1767369635402116, guid: b0b4ebe6a5c256148b1c502b85b1cab5,
     type: 2}
   shieldPrefab: {fileID: 1469284339564070, guid: eb4c21d2204944c8482e190db95cd69e,
     type: 2}
+  jumpSound: {fileID: 8300000, guid: d0b2b3fcdfe32b94a9c94e69188b0523, type: 3}
 --- !u!114 &114781821128229348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,8 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be130e82b80b4a65b4d62af5d8d8664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 1809123689297904, guid: 8deb34386a0294e11a9b86850f1c0490,
+  deathEffect: {fileID: 1011359182860546, guid: 22d012a60db00744f9bba1e61c903724,
     type: 2}
+  deathSound: {fileID: 8300000, guid: d346f1d6dc6c6584e986744230984630, type: 3}
 --- !u!212 &212405984671664818
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -260,8 +262,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300098, guid: 8faa319d19aa84c059cd643096750549, type: 3}
-  m_Color: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 1}
+  m_Sprite: {fileID: 21300076, guid: 8faa319d19aa84c059cd643096750549, type: 3}
+  m_Color: {r: 1, g: 0.50735295, b: 0.50735295, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

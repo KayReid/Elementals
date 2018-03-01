@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 	Renderer rend;
 	public static Player instance;
     public GameObject deathEffect;
+    public AudioClip deathSound;
 
 
     // PlatformerController2D controller;
@@ -23,25 +24,6 @@ public class Player : MonoBehaviour
 		instance = this;
 		rend = GetComponent<Renderer>();
 		rend.enabled = true;
-
-	}
-
-
-
-
-    IEnumerator blinkCoroutine (int numBlinks, float seconds) {
-		for (int i=0; i<numBlinks*2; i++) { 	// *2 is necessary because we want renderer.enabled = true and false 
-			// back and forth 3 times
-			//toggle renderer
-			rend.enabled = !rend.enabled;
-			rend.material.color = Color.red;
-			//wait for a bit
-			yield return new WaitForSeconds(seconds);
-		}
-
-		//make sure renderer is enabled when we exit
-		rend.enabled = true;
-		rend.material.color = Color.white;
 
 	}
 	
@@ -56,8 +38,7 @@ public class Player : MonoBehaviour
 	/// </summary>
 	public void Die ()
 	{
-		// Instantiate<GameObject> (deadPrefab, transform.position, transform.rotation);
-		//StartCoroutine (blinkCoroutine (3, 0.2f));
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
         StartCoroutine(explosionEffect());
 		Invoke ("Remove" , 1);
         // restart level here

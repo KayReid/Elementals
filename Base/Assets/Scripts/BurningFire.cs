@@ -6,6 +6,7 @@ using UnityEngine;
 public class BurningFire : MonoBehaviour
 {
     public Sprite[] frames;
+    public GameObject deathEffect;
     private SpriteRenderer spriteRenderer;
 
 
@@ -26,13 +27,26 @@ public class BurningFire : MonoBehaviour
         //}
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.CompareTag("Player"))
+        if (col.collider.CompareTag("Player"))
         {
-            Player player = collision.GetComponent <Player>();
+            Player player = col.transform.root.GetComponentInChildren<Player>();
             player.Die();
         }
+        if (col.gameObject.tag == "shield")
+        {
+            Destroy(gameObject);
+            StartCoroutine(explosionEffect());
+        }
+
+    }
+
+    IEnumerator explosionEffect()
+    {
+        gameObject.SetActive(false);
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1);
     }
 
     IEnumerator PlayAnimation(float seconds)
