@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4562050417460538}
   - component: {fileID: 212129650045325224}
   - component: {fileID: 114383168847129646}
-  - component: {fileID: 61840948182420102}
+  - component: {fileID: 60163496389291770}
   m_Layer: 8
   m_Name: moving_platform 1
   m_TagString: moving_platform
@@ -42,8 +42,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61840948182420102
-BoxCollider2D:
+--- !u!60 &60163496389291770
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -64,9 +64,37 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.77, y: 1.09}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.78499997, y: -0.265}
+      - {x: 0.805, y: -0.345}
+      - {x: 0.97499996, y: -0.45499998}
+      - {x: 1.025, y: -0.355}
+      - {x: 1.0849999, y: -0.145}
+      - {x: 1.2149999, y: -0.055}
+      - {x: 1.365, y: 0.175}
+      - {x: 1.385, y: 0.21499999}
+      - {x: 1.385, y: 0.53499997}
+      - {x: 1.365, y: 0.545}
+      - {x: -0.005, y: 0.545}
+      - {x: -0.024999999, y: 0.53499997}
+      - {x: -0.035, y: 0.325}
+      - {x: 0.015, y: 0.155}
+      - {x: -0.095, y: 0.295}
+      - {x: -0.085, y: 0.545}
+      - {x: -1.365, y: 0.545}
+      - {x: -1.385, y: 0.53499997}
+      - {x: -1.385, y: 0.285}
+      - {x: -1.3349999, y: 0.21499999}
+      - {x: -1.2049999, y: 0.085}
+      - {x: -1.025, y: -0.355}
+      - {x: -0.905, y: -0.435}
+      - {x: -0.555, y: -0.45499998}
+      - {x: -0.405, y: -0.545}
+      - {x: -0.044999998, y: -0.545}
+      - {x: 0.114999995, y: -0.505}
+      - {x: 0.275, y: -0.345}
+      - {x: 0.49499997, y: -0.21499999}
 --- !u!114 &114383168847129646
 MonoBehaviour:
   m_ObjectHideFlags: 1
