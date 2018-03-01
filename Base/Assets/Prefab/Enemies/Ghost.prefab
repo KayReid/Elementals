@@ -146,6 +146,7 @@ MonoBehaviour:
   body: {fileID: 70923357338917978}
   deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
     type: 2}
+  deathSound: {fileID: 8300000, guid: 5530e2c2371adb14eb55d5c2abfd7bc7, type: 3}
 --- !u!212 &212749455683418596
 SpriteRenderer:
   m_ObjectHideFlags: 1
