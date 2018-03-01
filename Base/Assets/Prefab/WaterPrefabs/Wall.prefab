@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4851310343343682}
   - component: {fileID: 212888867096914744}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Ice_PlatformsL (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4252252564986194}
   - component: {fileID: 61309663779512854}
-  m_Layer: 0
+  - component: {fileID: 114061368280135046}
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236977760918990}
   - component: {fileID: 212522492993622872}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Ice_PlatformsL (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4661071352997672}
   - component: {fileID: 212429545284294980}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Ice_PlatformsL (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,6 +156,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.699116, y: 1.000051}
   m_EdgeRadius: 0
+--- !u!114 &114061368280135046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067157626195802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882e614f3f15541ae9ab384b85420c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 1586861273381446, guid: 7888c8634a56d4154b35bb1a485e1dd4,
+    type: 2}
 --- !u!212 &212429545284294980
 SpriteRenderer:
   m_ObjectHideFlags: 1

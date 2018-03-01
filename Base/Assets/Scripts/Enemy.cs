@@ -14,7 +14,7 @@ public class Enemy : Killable {
 	public Collider2D leftCheck ; // 
 	public Collider2D rightCheck;
 	public Collider2D body;
-    public AudioClip deathEffect;
+    public GameObject deathEffect;
 
 	SpriteRenderer spriteRenderer;
 	public int dir = 1;
