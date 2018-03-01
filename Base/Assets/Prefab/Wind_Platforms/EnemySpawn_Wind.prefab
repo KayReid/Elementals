@@ -52,6 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnWidth: 7
-  spawnRate: 0.5
+  spawnRate: 0.2
   enemyPrefab: {fileID: 1570004571271690, guid: 0d4703ac46fb744a290afbb780cca527,
     type: 2}

@@ -12,7 +12,6 @@ public class FallingEnemy : Killable {
 	public float maxSpeed = 5;
 	[Tooltip("How fast does the animation play")]
 	public float seconds;
-	public Collider2D body;
 
 	public GameObject deathEffect;
     public AudioClip deathSound;

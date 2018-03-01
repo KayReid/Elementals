@@ -14,8 +14,6 @@ public class Ghost : Killable {
 
 	SpriteRenderer spriteRenderer;
 	public int dir = -1;
-	public float speed;
-	public Collider2D body;
 
 	public GameObject deathEffect;
     public AudioClip deathSound;

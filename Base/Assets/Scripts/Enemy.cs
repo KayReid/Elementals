@@ -56,6 +56,7 @@ public class Enemy : Killable {
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
 		}
+
 	}
 
 

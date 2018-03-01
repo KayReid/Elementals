@@ -32,14 +32,13 @@ public class Projectile : MonoBehaviour {
     }
 
     // Will destroy an object if it is an enemy.
-
     void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.CompareTag("enemy"))
 		{
-			print ("Hit Enemy");
+			// print ("Hit Enemy");
 			collision.GetComponent<Killable> ().Die (); // causing problem
-			Destroy(gameObject);
+			Destroy (gameObject);
 
 		}
     }

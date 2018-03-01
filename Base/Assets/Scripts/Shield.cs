@@ -31,7 +31,6 @@ public class Shield : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (seconds);
 		Destroy (gameObject);
-		// PlatformerController2D.instance.groundCheckOffset.y = -0.6f;
-		// circle.enabled = false;
+
 	}
 }
