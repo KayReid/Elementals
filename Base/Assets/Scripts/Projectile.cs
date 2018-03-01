@@ -38,7 +38,6 @@ public class Projectile : MonoBehaviour {
 		if (collision.CompareTag("enemy"))
 		{
 			print ("Hit Enemy");
-			// collision.transform.root.GetComponentInChildren<Killable>(). Die ();
 			collision.GetComponent<Killable> ().Die (); // causing problem
 			Destroy(gameObject);
 
