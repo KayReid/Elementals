@@ -32,13 +32,7 @@ public class Ghost : Killable {
 
 	// Update is called once per frame
 	void Update () {
-		// Enemy Type: Ghosts that move and shoot
-		/*
-		if ((lastTimeFired + 1 / rateOfFire) < Time.time) {
-			lastTimeFired = Time.time;
-			Shoot ();
-		}
-		*/
+
 
 	}
 
@@ -59,10 +53,12 @@ public class Ghost : Killable {
 	{
 		StartCoroutine(explosionEffect());
         AudioSource.PlayClipAtPoint(deathSound, transform.position);
-		Destroy(gameObject);
+		Invoke ("Remove" , 1);
 
 	}
-
+	public void Remove (){
+		Destroy (gameObject);
+	}
 
 
 	IEnumerator explosionEffect() {

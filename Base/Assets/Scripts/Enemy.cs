@@ -63,6 +63,9 @@ public class Enemy : Killable {
 	{
 		StartCoroutine(explosionEffect());
         AudioSource.PlayClipAtPoint(deathSound, transform.position);
+		Invoke ("Remove" , 1);
+	}
+	public void Remove (){
 		Destroy (gameObject);
 	}
 

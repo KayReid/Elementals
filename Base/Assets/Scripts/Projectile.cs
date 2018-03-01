@@ -43,19 +43,6 @@ public class Projectile : MonoBehaviour {
 
 		}
     }
-	/*
-	void OnCollisionEnter2D(Collision2D col)
-	{
-		if (col.collider.CompareTag("enemy"))
-		{
-			print ("Hit Enemy");
-			// col.transform.root.GetComponentInChildren<Player>();
-			col.collider.GetComponent<Killable> ().Die ();
-			Destroy(gameObject);
-
-		}
-	}
-	*/ 
 
     /// <summary>
     /// Destroys the projectile after seconds. This is a coroutine that needs be started using StartCoroutine().

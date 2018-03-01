@@ -69,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1930022004775376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8181586, y: 12.824487, z: -2.8562164}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -5.3, y: 0.1, z: -2.8562164}
+  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
   m_Children:
   - {fileID: 4403329240959140}
   - {fileID: 4740888850621178}
@@ -135,9 +135,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.036595263, y: -0.01903812}
+  m_Offset: {x: -0.23881039, y: -0.019038122}
   serializedVersion: 2
-  m_Radius: 2.2953012
+  m_Radius: 2.4975166
 --- !u!61 &61471569251551634
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7402004, y: -0.44027808}
+  m_Offset: {x: -1.3104919, y: -0.18750855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0855553, y: 2.46624}
+  m_Size: {x: 1.7316778, y: 1.5562685}
   m_EdgeRadius: 0
 --- !u!61 &61935455516150558
 BoxCollider2D:
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1541818, y: -0.1819557}
+  m_Offset: {x: 0.80448115, y: -0.28306234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -186,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1938508, y: 2.7880166}
+  m_Size: {x: 1.4944499, y: 1.878047}
   m_EdgeRadius: 0
 --- !u!114 &114636124881694072
 MonoBehaviour:
@@ -214,7 +214,7 @@ MonoBehaviour:
   body: {fileID: 0}
   deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
     type: 2}
-  dir: 1
+  dir: -1
   deathSound: {fileID: 8300000, guid: 5530e2c2371adb14eb55d5c2abfd7bc7, type: 3}
 --- !u!212 &212323474226563344
 SpriteRenderer:

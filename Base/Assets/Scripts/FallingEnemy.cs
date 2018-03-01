@@ -29,7 +29,7 @@ public class FallingEnemy : Killable {
 
 		transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
 	}
-
+		
 	void OnCollisionStay2D(Collision2D col)
 	{
 		if (col.collider.CompareTag ("shield")) {
@@ -68,8 +68,11 @@ public class FallingEnemy : Killable {
 	{
 		AudioSource.PlayClipAtPoint (deathSound, transform.position);
 		StartCoroutine (explosionEffect ());
-		Destroy (gameObject);
+		Invoke ("Remove" , 1);
 
+	}
+	public void Remove (){
+		Destroy (gameObject);
 	}
 
 }
