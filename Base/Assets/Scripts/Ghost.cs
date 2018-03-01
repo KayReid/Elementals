@@ -18,6 +18,7 @@ public class Ghost : Killable {
 	public float rateOfFire;
 	private float lastTimeFired = 0;
 	public Collider2D body;
+	public int numShoot = 3;
 
 	public GameObject deathEffect;
     public AudioClip deathSound;
@@ -32,10 +33,13 @@ public class Ghost : Killable {
 	// Update is called once per frame
 	void Update () {
 		// Enemy Type: Ghosts that move and shoot
+		/*
 		if ((lastTimeFired + 1 / rateOfFire) < Time.time) {
 			lastTimeFired = Time.time;
 			Shoot ();
 		}
+		*/
+
 	}
 
 	void OnCollisionStay2D(Collision2D col)
@@ -76,6 +80,10 @@ public class Ghost : Killable {
 			yield return new WaitForSeconds(seconds);
 			currentFrameIndex++;
 			currentFrameIndex = currentFrameIndex%frames.Length;
+			if (currentFrameIndex == 1) {
+				Shoot ();
+			}
+			
 		}
 
 	}

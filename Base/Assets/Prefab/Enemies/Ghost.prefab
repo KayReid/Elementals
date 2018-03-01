@@ -139,11 +139,12 @@ MonoBehaviour:
   frames:
   - {fileID: 21300010, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
   - {fileID: 21300006, guid: d5dec7717b45546aa8f632674bdfb036, type: 3}
-  seconds: 3
+  seconds: 1
   dir: -1
   speed: 0
   rateOfFire: 0.5
   body: {fileID: 70923357338917978}
+  numShoot: 3
   deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
     type: 2}
   deathSound: {fileID: 8300000, guid: 5530e2c2371adb14eb55d5c2abfd7bc7, type: 3}

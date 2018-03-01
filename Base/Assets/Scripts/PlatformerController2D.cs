@@ -83,7 +83,8 @@ public class PlatformerController2D : MonoBehaviour
             rb.velocity = new Vector2(0, velocity.y);
         }
 
-        transform.localScale = new Vector3(1f, 1f, 1f); // x = 1, Scale Player's animation facing right
+		// spriteRenderer.flipX = false;
+        // transform.localScale = new Vector3(1f, 1f, 1f); // x = 1, Scale Player's animation facing right
 
 
 		if (inputJump && grounded) {

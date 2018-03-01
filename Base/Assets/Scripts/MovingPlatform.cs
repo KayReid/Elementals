@@ -10,9 +10,9 @@ public class MovingPlatform : MonoBehaviour {
 	private Vector2 newPosition;
 
 	/// <summary>The speed at which the object moves.</summary>
-	[SerializeField] private int speed = 3;
+	public float speed = 3;
 	/// <summary>The maximum distance the object may move in either y direction.</summary>
-	[SerializeField] private int maxDistance = 1;
+	public float maxDistance = 1f;
 
 	void Start()
 	{

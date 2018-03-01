@@ -66,6 +66,7 @@ public class Enemy : Killable {
 		Destroy (gameObject);
 	}
 
+
 	IEnumerator PlayAnimation() {
 		int currentFrameIndex = 0;
 		while (true) {

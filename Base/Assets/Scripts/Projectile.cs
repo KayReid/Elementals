@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour {
     [Tooltip("How fast is the projectile moving upwards")]
     public float speed = 13;
     [Tooltip("After how many seconds is the projectile destroyed")]
-    public float lifeTime = 3;
+    public float lifeTime = 0.5f;
     [Tooltip("The direction the projectile travels")]
     public Vector2 direction = new Vector2(0, 1);
     [Tooltip("Sound played when projectile is shot.")]
