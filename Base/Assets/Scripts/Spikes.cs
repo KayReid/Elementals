@@ -22,8 +22,9 @@ public class Spikes : MonoBehaviour {
 			player.Die();
 		}
 		if (col.gameObject.tag == "shield") {
-			Destroy(gameObject);
 			StartCoroutine (explosionEffect ());
+			Destroy(gameObject);
+
 		}
 
 	}
