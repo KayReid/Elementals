@@ -10,15 +10,12 @@ public class Ghost : Killable {
 	[Tooltip("The individual sprites of the animation")]
 	public Sprite[] frames;
 	[Tooltip("How fast does the animation play")]
-	public float seconds;
+	public float seconds;	// How fast you can shoot
 
 	SpriteRenderer spriteRenderer;
 	public int dir = -1;
 	public float speed;
-	public float rateOfFire;
-	private float lastTimeFired = 0;
 	public Collider2D body;
-	public int numShoot = 3;
 
 	public GameObject deathEffect;
     public AudioClip deathSound;

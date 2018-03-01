@@ -13,17 +13,19 @@ public class MovingObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentTarget = endPoint.position; // When it first started, currentTarget Position should be at the end point
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, currentTarget, speed * Time.deltaTime);
         if (objectToMove.transform.position == endPoint.position) { // If our object position is == to the endpoint position
             currentTarget = startPoint.position;
+			print ("move left");
         }
         if (objectToMove.transform.position == startPoint.position) {
             currentTarget = endPoint.position;
+			print ("move right");
         }
+		objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, currentTarget, speed * Time.deltaTime);
+
 	}
 }

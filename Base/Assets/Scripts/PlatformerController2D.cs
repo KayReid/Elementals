@@ -82,11 +82,7 @@ public class PlatformerController2D : MonoBehaviour
         } else { // Reduce sliding movement
             rb.velocity = new Vector2(0, velocity.y);
         }
-
-		// spriteRenderer.flipX = false;
-        // transform.localScale = new Vector3(1f, 1f, 1f); // x = 1, Scale Player's animation facing right
-
-
+			
 		if (inputJump && grounded) {
 			velocity = ApplyJump (velocity);
             AudioSource.PlayClipAtPoint(jumpSound, transform.position);

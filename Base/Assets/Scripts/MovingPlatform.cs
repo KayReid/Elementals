@@ -34,9 +34,13 @@ public class MovingPlatform : MonoBehaviour {
 
 	private void OnCollisionExit2D(Collision2D other) {
 		if (other.transform.tag == "Player") {
-			other.transform.parent = null;
+			if (other.gameObject.activeSelf) { //Return if the object is active or not
+				other.transform.parent = null;
+			}
+
 		}
 	}
+	
 }
 
 
