@@ -30,14 +30,16 @@ public class FallingEnemy : Killable {
 		transform.position = transform.position + Vector3.down * speed * Time.deltaTime;
 	}
 
-	void OnCollisionEnter2D(Collision2D col) {
+	void OnCollisionStay2D(Collision2D col)
+	{
+		if (col.collider.CompareTag ("shield")) {
+			Die ();
+		}
 		if (col.collider.CompareTag("Player"))
 		{
+			print ("Hurt");
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
-		}
-		if (col.gameObject.tag == "shield") {
-			Die ();
 		}
 
 	}
@@ -64,9 +66,9 @@ public class FallingEnemy : Killable {
 
 	public override void Die()
 	{
-        AudioSource.PlayClipAtPoint(deathSound, transform.position);
-        StartCoroutine(explosionEffect());
-		Destroy(gameObject);
+		AudioSource.PlayClipAtPoint (deathSound, transform.position);
+		StartCoroutine (explosionEffect ());
+		Destroy (gameObject);
 
 	}
 

@@ -58,27 +58,13 @@ public class Enemy : Killable {
 		}
 	}
 
-	/// <summary>
-	/// Destroy the enemy and spawn the death animation.
-	/// </summary>
-
-	/*
-	public void Die()
-	{
-		Destroy(gameObject);
-		StartCoroutine(explosionEffect());
-
-	}
-	*/
 
 	public override void Die()
 	{
 		StartCoroutine(explosionEffect());
         AudioSource.PlayClipAtPoint(deathSound, transform.position);
-        Destroy(gameObject);
-
+		Destroy (gameObject);
 	}
-
 
 	IEnumerator PlayAnimation() {
 		int currentFrameIndex = 0;
