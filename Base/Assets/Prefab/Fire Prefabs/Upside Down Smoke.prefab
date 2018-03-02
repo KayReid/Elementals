@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4911694421297994}
   - component: {fileID: 212415978972876660}
   - component: {fileID: 60920328765270214}
-  - component: {fileID: 114292969414979392}
+  - component: {fileID: 114157584759049684}
   m_Layer: 10
   m_Name: Upside Down Smoke
   m_TagString: Untagged
@@ -237,7 +237,7 @@ PolygonCollider2D:
       - {x: 0.615, y: 2.36}
       - {x: 0.615, y: 2.5}
       - {x: 0.49499997, y: 2.6399999}
---- !u!114 &114292969414979392
+--- !u!114 &114157584759049684
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -245,10 +245,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632173736252550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 882e614f3f15541ae9ab384b85420c35, type: 3}
+  m_Script: {fileID: 11500000, guid: 057021635a0304feeb8be28a64137d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  check: {fileID: 0}
 --- !u!212 &212415978972876660
 SpriteRenderer:
   m_ObjectHideFlags: 1
