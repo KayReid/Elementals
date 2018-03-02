@@ -21,12 +21,22 @@ public class Tornado : MonoBehaviour {
 	void Update () {
 		
 	}
-
+	/*
 	void OnCollisionEnter2D(Collision2D col) {
 		if (col.collider.CompareTag("Player"))
 		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
 			player.Die();
+		}
+
+	}
+	*/
+	void OnCollisionStay2D(Collision2D col) {
+		if (col.collider.CompareTag ("Player")) {
+			Player player = col.transform.root.GetComponentInChildren<Player> ();
+			if (player.gameObject.activeInHierarchy) {
+				player.Die ();
+			}
 		}
 
 	}

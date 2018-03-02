@@ -16,15 +16,16 @@ public class Spikes : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.tag == "shield") {
+			Die ();
+
+		}
 		if (col.collider.CompareTag("Player"))
 		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
-			player.Die();
-		}
-		if (col.gameObject.tag == "shield") {
-			StartCoroutine (explosionEffect ());
-			Destroy(gameObject);
-
+			if (player.gameObject.activeInHierarchy) {
+				player.Die ();
+			}
 		}
 
 	}
@@ -33,6 +34,17 @@ public class Spikes : MonoBehaviour {
 		gameObject.SetActive(false);
 		Instantiate(deathEffect, transform.position, transform.rotation);
 		yield return new WaitForSeconds(1);
+	}
+
+	void Die()
+	{
+		StartCoroutine (explosionEffect ());
+		Invoke ("Remove" , 1);
+
+	}
+
+	void Remove (){
+		Destroy (gameObject);
 	}
 
 }

@@ -65,8 +65,8 @@ public class FallingEnemy : Killable {
 
 	public override void Die()
 	{
-		AudioSource.PlayClipAtPoint (deathSound, transform.position);
 		StartCoroutine (explosionEffect ());
+		AudioSource.PlayClipAtPoint (deathSound, transform.position);
 		Invoke ("Remove" , 1);
 
 	}

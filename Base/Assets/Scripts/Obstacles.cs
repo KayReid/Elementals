@@ -17,7 +17,9 @@ public class Obstacles : MonoBehaviour {
 		if (col.collider.CompareTag("Player"))
 		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
-			player.Die();
+			if (player.gameObject.activeInHierarchy) {
+				player.Die ();
+			}
 		}
 
 	}

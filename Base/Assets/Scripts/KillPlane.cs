@@ -18,10 +18,8 @@ public class KillPlane : MonoBehaviour {
 	{
 		if (col.CompareTag("enemy"))
 		{
-			print ("Hit Enemy");
 			Destroy(col.gameObject);
 		
-
 		}
 
 	}

@@ -38,8 +38,9 @@ public class Player : MonoBehaviour
 	/// </summary>
 	public void Die ()
 	{
+		print (gameObject.activeSelf);
+		StartCoroutine(explosionEffect());
         AudioSource.PlayClipAtPoint(deathSound, transform.position);
-        StartCoroutine(explosionEffect());
 		Invoke ("Remove" , 1);
         // restart level here
         GameManager.instance.RestartTheGameAfterSeconds(2);
