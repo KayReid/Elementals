@@ -17,7 +17,9 @@ public class Spikes : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if (col.gameObject.tag == "shield") {
-			Die ();
+			if (gameObject.activeInHierarchy) {
+				Die ();
+			}
 
 		}
 		if (col.collider.CompareTag("Player"))

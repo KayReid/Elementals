@@ -32,7 +32,9 @@ public class FallingEnemy : Killable {
 	void OnCollisionStay2D(Collision2D col)
 	{
 		if (col.collider.CompareTag ("shield")) {
-			Die ();
+			if (gameObject.activeInHierarchy) {
+				Die ();
+			}
 		}
 		if (col.collider.CompareTag("Player"))
 		{
