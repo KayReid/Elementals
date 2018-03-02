@@ -36,11 +36,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4991654722297730}
   - component: {fileID: 212550263793492838}
-  - component: {fileID: 58354412584572364}
-  - component: {fileID: 114842709033803204}
+  - component: {fileID: 60689457539647082}
+  - component: {fileID: 114670558593383520}
   m_Layer: 0
   m_Name: rock
-  m_TagString: Untagged
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,21 +72,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58354412584572364
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646937443227364}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00000035762787, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.22934711
 --- !u!58 &58923506849869358
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -102,7 +87,35 @@ CircleCollider2D:
   m_Offset: {x: -0.0059038997, y: 0}
   serializedVersion: 2
   m_Radius: 0.22251683
---- !u!114 &114842709033803204
+--- !u!60 &60689457539647082
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646937443227364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+--- !u!114 &114670558593383520
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,16 +123,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646937443227364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab4594edfa5d453e827b886f437d0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 882e614f3f15541ae9ab384b85420c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  lifeTime: 3
-  direction: {x: -1, y: 0}
-  shieldLayers:
-    serializedVersion: 2
-    m_Bits: 2048
-  check: {fileID: 58923506849869358}
+  deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
+    type: 2}
 --- !u!212 &212550263793492838
 SpriteRenderer:
   m_ObjectHideFlags: 1
