@@ -2280,6 +2280,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114206601342127594, guid: ca364c7d5954b414e992f1fca03fec98,
+        type: 2}
+      propertyPath: levelToLoad
+      value: Celia's Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca364c7d5954b414e992f1fca03fec98, type: 2}
   m_IsPrefabParent: 0
@@ -6727,11 +6732,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4584938300253902, guid: a06772679346e3c42a11d4f56f46a151, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4584938300253902, guid: a06772679346e3c42a11d4f56f46a151, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 4584938300253902, guid: a06772679346e3c42a11d4f56f46a151, type: 2}
       propertyPath: m_LocalPosition.z

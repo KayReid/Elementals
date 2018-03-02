@@ -3888,6 +3888,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114206601342127594, guid: ca364c7d5954b414e992f1fca03fec98,
+        type: 2}
+      propertyPath: levelToLoad
+      value: Kayleigh's Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca364c7d5954b414e992f1fca03fec98, type: 2}
   m_IsPrefabParent: 0

@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Celia's Scene.unity
     guid: 99305915f13e741e09aa4344317c89c6
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 130000b2bef924c49bbdcdf827dc3215
+  - enabled: 1
+    path: Assets/Scenes/Alicia's Scene.unity
+    guid: 9bcc5166753517149a3b99d31cb67ce1
+  - enabled: 1
+    path: Assets/Scenes/Binh's Scene.unity
+    guid: 3bdd7c2bf711b441e92ca3eab89aa693
+  - enabled: 1
+    path: Assets/Scenes/Kayleigh's Scene.unity
+    guid: d67ba02298f244d9ba292903066b7185

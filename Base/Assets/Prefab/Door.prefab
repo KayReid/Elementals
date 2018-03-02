@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4031433144034364}
   - component: {fileID: 61218744952981332}
+  - component: {fileID: 114206601342127594}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1546201262403758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.676198, y: 11.877807, z: 1.591066}
+  m_LocalPosition: {x: 4.04, y: 90.09, z: 1.591066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4032004276719316}
@@ -109,10 +110,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12035799, y: 0.9528332}
+  m_Offset: {x: 1.04, y: 1.474319}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -123,8 +124,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.91976166, y: 1.8224468}
+  m_Size: {x: 0.91976166, y: 2.95}
   m_EdgeRadius: 0
+--- !u!114 &114206601342127594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546201262403758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb1184a613ee4c8b9dab51de2f3131c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Alicia's Scene
 --- !u!212 &212456590764007190
 SpriteRenderer:
   m_ObjectHideFlags: 1
