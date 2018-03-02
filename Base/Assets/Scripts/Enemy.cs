@@ -51,6 +51,11 @@ public class Enemy : Killable {
 
 	void OnCollisionStay2D(Collision2D col)
 	{
+		if (col.collider.CompareTag ("shield")) {
+			if (gameObject.activeInHierarchy) {
+				Die ();
+			}
+		}
 		if (col.collider.CompareTag("Player"))
 		{
 			Player player = col.transform.root.GetComponentInChildren<Player>();
