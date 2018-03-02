@@ -40,7 +40,9 @@ public class FallingEnemy : Killable {
 		{
 			print ("Hurt");
 			Player player = col.transform.root.GetComponentInChildren<Player>();
-			player.Die();
+			if (player.gameObject.activeInHierarchy) {
+				player.Die ();
+			}
 		}
 
 	}
