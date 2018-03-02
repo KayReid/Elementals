@@ -95,7 +95,6 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   seconds: 0.3
-  body: {fileID: 58746966436206586}
   deathEffect: {fileID: 1868794624258586, guid: a3ecd2db1c624442199e45c0b022debb,
     type: 2}
   deathSound: {fileID: 8300000, guid: 5530e2c2371adb14eb55d5c2abfd7bc7, type: 3}
@@ -134,7 +133,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300090, guid: d862292995c15dd4582bd3f9e66d1f20, type: 3}
-  m_Color: {r: 1, g: 0.5661765, b: 0.5661765, a: 1}
+  m_Color: {r: 1, g: 0.4852941, b: 0.4852941, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
