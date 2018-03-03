@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 78059583ee3fd4a888e33f88627b6ef9
+  - enabled: 1
     path: Assets/Scenes/Celia's Scene.unity
     guid: 99305915f13e741e09aa4344317c89c6
   - enabled: 1
@@ -17,6 +20,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kayleigh's Scene.unity
     guid: d67ba02298f244d9ba292903066b7185
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 78059583ee3fd4a888e33f88627b6ef9
