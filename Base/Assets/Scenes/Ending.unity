@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a182e9a030e431eba460cdfcff6fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1.5
+  seconds: 1.2
 --- !u!1 &91377603
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 700, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &91377605
 MonoBehaviour:
@@ -266,7 +266,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Win
+  m_Text: 'You defeated the evil
+
+'
 --- !u!222 &91377606
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -301,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a182e9a030e431eba460cdfcff6fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1.5
+  seconds: 1.2
 --- !u!212 &171436075
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -566,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a182e9a030e431eba460cdfcff6fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1.5
+  seconds: 1.2
 --- !u!1 &948527353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a182e9a030e431eba460cdfcff6fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 1.5
+  seconds: 1.2
 --- !u!1 &2083838489
 GameObject:
   m_ObjectHideFlags: 0
