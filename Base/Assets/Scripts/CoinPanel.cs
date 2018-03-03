@@ -22,7 +22,7 @@ public class CoinPanel : MonoBehaviour {
 	}
 
 	public void removeCoins () {
-		numCoins -= 3;
+		numCoins -= 10;
 		setCoinText ();
 	} 
 
@@ -33,7 +33,7 @@ public class CoinPanel : MonoBehaviour {
 	}
 
 	public bool canUseItem () {
-		if (numCoins >= 3) {
+		if (numCoins >= 10) {
 			return true;
 		} else { 
 			return false; 
