@@ -5010,6 +5010,14 @@ Prefab:
       propertyPath: m_Name
       value: Earthbird (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4387341902859860, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387341902859860, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
   m_IsPrefabParent: 0
@@ -6306,6 +6314,14 @@ Prefab:
     - target: {fileID: 1125737450811374, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
       propertyPath: m_Name
       value: Earthbird (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387341902859860, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387341902859860, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5632c04c55e24d6d92a3940779e3a1d, type: 2}
