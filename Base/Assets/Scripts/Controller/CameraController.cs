@@ -13,13 +13,11 @@ public class CameraController : MonoBehaviour {
     [SerializeField] float yMin = 0;
     [SerializeField] float yMax = 10;
 
-    static CameraController instance;
     Vector3 offset;
 
     void Awake()
     {
         offset = new Vector3(0, 0, transform.position.z);
-        instance = this;
     }
 
     void Update()

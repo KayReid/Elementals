@@ -21,16 +21,7 @@ public class Tornado : MonoBehaviour {
 	void Update () {
 		
 	}
-	/*
-	void OnCollisionEnter2D(Collision2D col) {
-		if (col.collider.CompareTag("Player"))
-		{
-			Player player = col.transform.root.GetComponentInChildren<Player>();
-			player.Die();
-		}
 
-	}
-	*/
 	void OnCollisionStay2D(Collision2D col) {
 		if (col.collider.CompareTag ("Player")) {
 			Player player = col.transform.root.GetComponentInChildren<Player> ();
@@ -45,7 +36,6 @@ public class Tornado : MonoBehaviour {
 		int currentFrameIndex = 0;
 		while (true) {
 			spriteRenderer.sprite = frames [currentFrameIndex];
-			// yield return new WaitForSeconds(1f / framesPerSecond);
 			yield return new WaitForSeconds(seconds);
 			currentFrameIndex++;
 			currentFrameIndex = currentFrameIndex%frames.Length;

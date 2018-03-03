@@ -27,7 +27,6 @@ public class CoinPanel : MonoBehaviour {
 	} 
 
 	public void setCoinText () {
-		// print ("set the text");
 		coinText.text = numCoins.ToString ();
 
 	}

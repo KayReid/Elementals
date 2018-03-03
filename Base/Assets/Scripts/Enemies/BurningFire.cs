@@ -18,15 +18,7 @@ public class BurningFire : MonoBehaviour
 
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if (check.IsTouchingLayers (shieldLayers)) {
-        //	check.isTrigger = false;
-        //}
-    }
-
+		
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.collider.CompareTag("Player"))

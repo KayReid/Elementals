@@ -14,11 +14,6 @@ public class Player : MonoBehaviour
     public GameObject deathEffect;
     public AudioClip deathSound;
 
-
-    // PlatformerController2D controller;
-    //public bool ground;
-
-
 	void Awake ()
 	{
 		instance = this;

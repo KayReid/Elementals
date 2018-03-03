@@ -51,13 +51,9 @@ public class PlatformerController2D : MonoBehaviour
 		instance = this;
 		inputItem = false;
         inputFire = false;
-		// print (inputItem);
-		// grounded = false;
 		rb = GetComponent <Rigidbody2D> ();
         playerAnim = GetComponent<Animator>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
-
-      //  playerRigidBody = GetComponent<Rigidbody2D>();
 	}
 
 	/// <summary>
@@ -73,12 +69,10 @@ public class PlatformerController2D : MonoBehaviour
         if(velocity.x > 0) {
             velocity = new Vector2(speed, velocity.y);
 			spriteRenderer.flipX = false;
-            // transform.localScale = new Vector3(1f, 1f, 1f);
         }
         if (velocity.x < 0) {
             velocity = new Vector2(-speed, velocity.y);
 			spriteRenderer.flipX = true;
-            // transform.localScale = new Vector3(-1f, 1f, 1f);
         } else { // Reduce sliding movement
             rb.velocity = new Vector2(0, velocity.y);
         }
@@ -97,7 +91,6 @@ public class PlatformerController2D : MonoBehaviour
 	}
 
 	void Update () {
-		// if (Coins.instance.canUseItem && inputItem) {
 		if (CoinPanel.instance.canUseItem() && inputItem) {
 			UseItem ();
 		}
@@ -113,11 +106,7 @@ public class PlatformerController2D : MonoBehaviour
         playerAnim.SetBool("Grounded", grounded);
 
     }
-    /*
-    public bool getGrounded() {
-        return grounded;
-    }
-    */
+
 	Vector2 ApplyJump (Vector2 velocity) {
 		velocity.y = jumpForce; // amount of jump
 		grounded = false;

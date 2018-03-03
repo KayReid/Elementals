@@ -28,7 +28,6 @@ public class Coins : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		// if the other object has the player tag...
 		if (other.CompareTag ("Player")) {
-            // Player player = other.GetComponent<Player> ();
             AudioSource.PlayClipAtPoint(collectSound, transform.position);
 			CoinPanel.instance.CollectCoins ();
 			Destroy (gameObject);
@@ -44,7 +43,6 @@ public class Coins : MonoBehaviour {
 		int currentFrameIndex = 0;
 		while (true) {
 			spriteRenderer.sprite = frames [currentFrameIndex];
-			// yield return new WaitForSeconds(1f / framesPerSecond);
 			yield return new WaitForSeconds(seconds);
 			currentFrameIndex++;
 			currentFrameIndex = currentFrameIndex%frames.Length;

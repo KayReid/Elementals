@@ -82,7 +82,6 @@ public class Enemy : Killable {
 		int currentFrameIndex = 0;
 		while (true) {
 			spriteRenderer.sprite = frames [currentFrameIndex];
-			// yield return new WaitForSeconds(1f / framesPerSecond);
 			yield return new WaitForSeconds(seconds);
 			currentFrameIndex++;
 			currentFrameIndex = currentFrameIndex%frames.Length;

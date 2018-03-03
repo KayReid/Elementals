@@ -24,12 +24,7 @@ public class Ghost : Killable {
 		spriteRenderer.enabled = true;
 		StartCoroutine(PlayAnimation());
 	}
-
-	// Update is called once per frame
-	void Update () {
-
-
-	}
+		
 
 	void OnCollisionStay2D(Collision2D col)
 	{
