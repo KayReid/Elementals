@@ -5,26 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     
-    public string restartLevel;
-    public string continueLevel;
+    public string firstLevel;
 
-    public string[] levelNames;
+    public GameObject mainMenu;
 
 	// Use this for initialization
 	void Start () {
-		
+        mainMenu.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            mainMenu.SetActive(true);
+        }
 		
 	}
 
     public void NewGame() {
-        SceneManager.LoadScene(restartLevel);    
+        SceneManager.LoadScene(firstLevel);    
     }
     public void ContinueGame() {
-        SceneManager.LoadScene(continueLevel);
+        mainMenu.SetActive(false);
     }
 
     public void QuitGame() {
