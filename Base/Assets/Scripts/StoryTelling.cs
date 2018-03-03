@@ -15,13 +15,16 @@ public class StoryTelling : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		view = GetComponent<Text> ();
-		Invoke ("PageTurn", 0);
+		PageNumber = -1;
+		PageTurn ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		print (PageNumber);
 		if (Input.anyKeyDown) {
-			Invoke ("PageTurn", 0.2f);
+			print ("pressed");
+			PageTurn ();
 		}
 
 	}
